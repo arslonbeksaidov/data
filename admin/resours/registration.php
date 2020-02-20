@@ -38,9 +38,9 @@
         <div class="card-body register-card-body">
             <p class="login-box-msg">Register a new membership</p>
 
-            <form action="../app/Auth.php" method="post">
+            <form action="../app/Auth.php" method="post">  <!-- post metidi bilan yubordik malumotlarni  Auth.php fayiliga -->
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="username" placeholder="username">
+                    <input type="text" class="form-control" name="username" placeholder="username">  <!-- name yozilishi kerak-->
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-user"></span>

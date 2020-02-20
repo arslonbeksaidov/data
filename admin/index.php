@@ -10,10 +10,6 @@ session_start();
 if ($_SESSION['role']!=1){
     header("location: ../admin/resours/errorLogin.php");
 }
-//echo $_SESSION['role'];
-
-//Login::getAuth();
-//echo $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <!--

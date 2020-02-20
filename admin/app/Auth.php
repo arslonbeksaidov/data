@@ -23,9 +23,20 @@ class Auth extends DataConnection  // DataConnection dan meros olish
             $mail = $_POST['mail'];
             $fio = $_POST['fio'];
             $role = 1;
-            $sql = "INSERT INTO user (username, password, mail,fio,role)   // sql kodi : malumotlarni bazaga yuklash uchun
-    VALUES ('$username','$password','$mail','$fio','$role')";
-            $con->exec($sql);   // bajarish uchun
+           /* $sql = "INSERT INTO user (username, password, mail,fio,role)   // sql kodi : malumotlarni bazaga yuklash uchun
+    VALUES ('$username','$password','$mail','$fio','$role')";*/
+
+            $sql2 = "INSERT INTO user (username, password, mail, fio, role) VALUES (:username, :password, :mail, :fio, :role)";
+            $stmt = $con->prepare($sql2);
+            $options = [
+                'cost' => 12,
+            ];
+            $stmt->bindParam(':username',$username);
+            $stmt->bindParam(':password',md5($password.'data_uchun'));
+            $stmt->bindParam(':mail',$mail);
+            $stmt->bindParam(':fio',$fio);
+            $stmt->bindParam(':role',$role);
+            $stmt->execute();   // bajarish uchun
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }

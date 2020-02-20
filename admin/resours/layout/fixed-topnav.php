@@ -43,7 +43,7 @@
                                   <?= $_SESSION['fio'] ?>
                                   <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                               </h3>
-                              <p class="text-sm"><?= date('i',time() - $_SESSION['time']) .' minutdan bari onlinesan'  ?></p>
+                              <p class="text-sm"><?= date('i',time() - $_SESSION['time']) .' minutdan beri aktivsiz'  ?></p>
 
                           </div>
                       </div>
@@ -63,8 +63,6 @@
 <script>
     function grey() {
         document.getElementById('grey').style.backgroundColor = 'grey';
-
-
     }
     function white() {
         document.getElementById('grey').style.backgroundColor = 'white';

@@ -13,11 +13,8 @@ class Login extends DataConnection
     public static function getAuth()
     {
         $username = $_POST['username'];
-        $options = [
-            'cost' => 12,
-        ];
+
         $password = md5($_POST['password'].'data_uchun') ;
-//        var_dump($password);die();
         $con = self::get();
         $sql = "SELECT user.username, user.password, user.mail, user.fio, user.role FROM user as user WHERE username = '$username' AND password = '$password'";
         $stmt = $con->prepare($sql);

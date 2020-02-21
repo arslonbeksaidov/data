@@ -41,4 +41,6 @@ class Login extends DataConnection
 
 }
 
-Login::getAuth();
+if ($_REQUEST['login'] === 'login'){
+    Login::getAuth();
+}

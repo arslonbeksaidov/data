@@ -65,7 +65,7 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Tizimga kirish</button>
+                        <button type="submit" name="login" value="login" class="btn btn-primary btn-block btn-flat">Tizimga kirish</button>
                     </div>
                     <!-- /.col -->
                 </div>

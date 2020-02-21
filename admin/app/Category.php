@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * Created by PhpStorm.
  * User: apple
@@ -7,6 +8,10 @@
  */
 
 require 'DataConnection.php';
+
+if (isset($_REQUEST['delete'])) {
+    $id = intval($_REQUEST['delete']);
+}
 
 class Category extends DataConnection
 {
@@ -26,7 +31,7 @@ class Category extends DataConnection
                 $smtm = $this->connection->prepare($sql);
                 $smtm->bindParam(':name', $cat_name);
                 $smtm->execute();
-                }
+            }
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
@@ -34,14 +39,55 @@ class Category extends DataConnection
 
 
     }
+
+    function getAllCategory()
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare("SELECT id, name FROM category");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $results = $stmt->fetchAll();
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+
+    function deleteCategory($id)
+    {
+        try {
+            $this->connection = self::get();
+            // set the PDO error mode to exception
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            // sql to delete a record
+            $sql = "DELETE FROM category WHERE id=$id";
+
+            // use exec() because no results are returned
+            $this->connection->exec($sql);
+            echo "Record deleted successfully";
+        } catch (PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+
+        $conn = null;
+    }
 }
 
 
-if (isset($_REQUEST['category']))
-{   $Category = new Category();
+if (isset($_REQUEST['category'])) {
+    $Category = new Category();
     $Category->addCategory();
     header('Location: /admin');
-}else{
-    header('Location: /admin/resours/category/addCategory.php');
+} elseif (isset($_REQUEST['delete'])) {
+
+    $Category = new Category();
+    $Category->deleteCategory($id);
+    header('Location: /admin/resours/category/category.php');
+} else {
+//    header('Location: /admin/resours/category/category.php');
 }
 

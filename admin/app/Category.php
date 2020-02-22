@@ -23,10 +23,10 @@ class Category extends DataConnection
             $this->connection = self::get();
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            if (isset($_POST['category'])) {
+            if (isset($_POST['add_category'])) {
 
                 $cat_name = addslashes($_POST['cat_name']);
-
+//                var_dump($cat_name);die();
                 $sql = "INSERT INTO category ( name ) VALUES ( :name )";
                 $smtm = $this->connection->prepare($sql);
                 $smtm->bindParam(':name', $cat_name);
@@ -78,10 +78,10 @@ class Category extends DataConnection
 }
 
 
-if (isset($_REQUEST['category'])) {
+if (isset($_REQUEST['add_category'])) {
     $Category = new Category();
     $Category->addCategory();
-    header('Location: /admin');
+    header('Location: /admin/resours/category/category.php');
 } elseif (isset($_REQUEST['delete'])) {
 
     $Category = new Category();

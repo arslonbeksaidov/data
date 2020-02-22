@@ -209,7 +209,7 @@ session_start();
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" name="sdffdf" value="add_category" class="btn btn-primary">Submit</button>
+                                    <button type="submit" name="add_category" value="add_category" class="btn btn-primary">Submit</button>
                                 </div>
                             </form>
                         </div>

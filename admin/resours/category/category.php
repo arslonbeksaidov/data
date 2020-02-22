@@ -214,6 +214,7 @@ $results = $AllCategory->getAllCategory();
                                 <?php
                                 foreach ($results as $value):
                                 ?>
+
                                 <tr>
                                     <td><?= $value['id']?></td>
                                     <td><?=$value['name']?>

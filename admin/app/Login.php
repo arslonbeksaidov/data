@@ -27,7 +27,6 @@ class Login extends DataConnection
             $time = time();
             $_SESSION['time'] = $time;
         }
-//        var_dump($_SESSION);die();
         if ($_SESSION['role'] == 1 and $_SESSION['username']) {
             header("Location: /admin");
         } else {

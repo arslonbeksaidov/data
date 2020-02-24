@@ -108,7 +108,7 @@ class Category extends DataConnection
             $stmt = $this->connection->prepare($sql);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
-            $result = $stmt->fetch();
+            $result = $stmt->fetchAll();
             return $result;
 
 
@@ -130,12 +130,13 @@ if (isset($_REQUEST['add_category'])) {
     header('Location: /admin/resours/category/category.php');
 } elseif (isset($_REQUEST['updatePage'])) {
     $Category = new Category();
-    $results = $Category->getAllCategory($id);
+    $results = $Category->getUpdateInfo($id);
     header("Location: /admin/resours/category/updateCategory.php?" . http_build_query($results, 'data'));
-//    header("Location: /admin/resours/category/updateCategory.php?".http_build_query($results));
 } elseif (isset($_REQUEST['sendUpdatedData'])) {
     $Category = new Category();
-    $results = $Category->updateCategory($id, $cat_name);
+    $Category->updateCategory($id, $cat_name);
     header('Location: /admin/resours/category/category.php');
 }
+
+
 

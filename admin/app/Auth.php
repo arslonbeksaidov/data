@@ -23,6 +23,7 @@ class Auth extends DataConnection  // DataConnection dan meros olish
             $mail = $_POST['mail'];
             $fio = $_POST['fio'];
             $role = 1;
+            $user_id = $_POST['id'];
 
 
             $sql2 = "INSERT INTO user (username, password, mail, fio, role) VALUES (:username, :password, :mail, :fio, :role)";

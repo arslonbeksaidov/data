@@ -243,7 +243,7 @@ $results = $AllPost->getAllPost();
                                         <td>
                                             <a href="/admin/app/Post.php?updatePage=<?= $value['id']; ?> " type="button"
                                                class="btn btn-success">O'zgartirish</a>
-                                            <a href="/admin/app/Post.php?<?='delete_id='. $value['id'].'&delete_image='.$value['image']; ?> " type="button"
+                                            <a href="/admin/app/Post.php?<?='delete_id='. $value['id'] ?> " type="button"
                                                class="btn btn-danger">O'chirish</a>
                                         </td>
                                     </tr>

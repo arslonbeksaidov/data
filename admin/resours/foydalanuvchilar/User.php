@@ -220,7 +220,7 @@ $results = $AllUser->getAllUser();
                                     <td><?=$value['username']?>
                                     </td>
                                     <td>
-                                        <a href="/data/admin/app/User.php?updatePage=<?= $value['id']; ?> " type="button" class="btn btn-success">O'zgartirish</a>
+                                        <a href="/admin/app/User.php?updatePage=<?= $value['id']; ?> " type="button" class="btn btn-success">O'zgartirish</a>
                                         <a href="/data/admin/app/User.php?delete=<?= $value['id']; ?> " type="button" class="btn btn-danger">O'chirish</a>
                                     </td>
                                 </tr>

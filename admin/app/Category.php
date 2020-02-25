@@ -11,12 +11,14 @@ require 'DataConnection.php';
 
 if (isset($_REQUEST['delete'])) {
     $id = intval($_REQUEST['delete']);
+
 } elseif (isset($_REQUEST['updatePage'])) {
     $id = intval($_REQUEST['updatePage']);
+
 } elseif (isset($_REQUEST['sendUpdatedData'])) {
     $id = intval($_REQUEST['sendUpdatedData']);
     $cat_name = addslashes($_REQUEST['cat_name']);
-//        var_dump($id);die();
+
 }
 
 class Category extends DataConnection
@@ -124,14 +126,17 @@ if (isset($_REQUEST['add_category'])) {
     $Category = new Category();
     $Category->addCategory();
     header('Location: /admin/resours/category/category.php');
+
 } elseif (isset($_REQUEST['delete'])) {
     $Category = new Category();
     $Category->deleteCategory($id);
     header('Location: /admin/resours/category/category.php');
+
 } elseif (isset($_REQUEST['updatePage'])) {
     $Category = new Category();
     $results = $Category->getUpdateInfo($id);
     header("Location: /admin/resours/category/updateCategory.php?" . http_build_query($results, 'data'));
+
 } elseif (isset($_REQUEST['sendUpdatedData'])) {
     $Category = new Category();
     $Category->updateCategory($id, $cat_name);

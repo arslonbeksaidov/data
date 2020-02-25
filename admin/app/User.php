@@ -131,7 +131,7 @@ if (isset($_REQUEST['add_user'])) {
 } elseif (isset($_REQUEST['updatePage'])) {
     $User = new User();
     $results = $User->getAllUser($id);
-    header("Location: /data/admin/resours/foydalanuvchilar/updateUser.php?" . http_build_query
+    header("Location: /admin/resours/foydalanuvchilar/updateUser.php?" . http_build_query
         ($results, 'data'));
 //    header("Location: /admin/resours/category/updateCategory.php?".http_build_query($results));
 } elseif (isset($_REQUEST['sendUpdatedData1'])) {

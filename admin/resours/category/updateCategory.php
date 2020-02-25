@@ -1,7 +1,7 @@
 <?php
 session_start();
 $results = $_REQUEST;
-
+//var_dump($results);die();
 ?>
 <!DOCTYPE html>
 <html>

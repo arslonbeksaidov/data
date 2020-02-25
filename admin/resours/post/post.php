@@ -243,7 +243,7 @@ $results = $AllPost->getAllPost();
                                         <td>
                                             <a href="/admin/app/Post.php?updatePage=<?= $value['id']; ?> " type="button"
                                                class="btn btn-success">O'zgartirish</a>
-                                            <a href="/admin/app/Post.php?delete=<?= $value['id']; ?> " type="button"
+                                            <a href="/admin/app/Post.php?<?='delete_id='. $value['id'].'&delete_image='.$value['image']; ?> " type="button"
                                                class="btn btn-danger">O'chirish</a>
                                         </td>
                                     </tr>
@@ -331,12 +331,12 @@ $results = $AllPost->getAllPost();
                                            placeholder="Created at">
                                 </div>
                                 <div class="form-group">
-                                    <input type="hidden" name="created_by" value="<?= $_SESSION['user_id']?>" class="form-control" id="post"
+                                    <input type="hidden" name="created_by" value="35" class="form-control" id="post"
                                            placeholder="Created at">
                                 </div>
                                 <div class="form-group">
                                     <select name="cat_id" class="custom-select">
-                                        <option value="15">cat_name</option>
+                                        <option value="16">cat_name</option>
 
                                     </select>
                                 </div>

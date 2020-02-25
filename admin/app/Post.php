@@ -8,6 +8,9 @@
 declare(strict_types=1);
 require 'DataConnection.php';
 
+if (isset($_REQUEST['delete_id'])){
+    $id = intval($_REQUEST['delete_id']);
+}
 class Post extends DataConnection
 {
     public $connection;
@@ -17,6 +20,7 @@ class Post extends DataConnection
         try {
             $this->connection = self::get();
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
             if (isset($_POST['add_post']) and $_FILES['image']) {
 
@@ -47,6 +51,7 @@ class Post extends DataConnection
                 $smtm->bindParam(':image', $image_name);
                 $smtm->bindParam(':seen', $seen);
                 $smtm->bindParam(':cat_id', $cat_id);
+
                 $smtm->execute();
             }
         } catch (PDOException $e) {
@@ -72,9 +77,25 @@ class Post extends DataConnection
         }
     }
 
-    public function deletePost()
+    public function deletePost($id)
     {
+        var_dump($_REQUEST);die();
+        try {
+            $this->connection = self::get();
+            // set the PDO error mode to exception
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+            // sql to delete a record
+            $sql = "DELETE FROM category WHERE id=$id";
+
+            // use exec() because no results are returned
+            $this->connection->exec($sql);
+            echo "Record deleted successfully";
+        } catch (PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+
+        $conn = null;
     }
 
     public function getUpdatePost()
@@ -88,5 +109,8 @@ if (isset($_REQUEST['add_post'])){
     $Post = new Post();
     $Post->addPost();
     header('Location: /admin/resours/post/post.php');
+}elseif (isset($_REQUEST['delete_id'])){
+    $Post = new Post();
+    $Post->deletePost($id);
+    header('Location: /admin/resours/post/post.php');
 }
-

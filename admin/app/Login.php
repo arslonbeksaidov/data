@@ -16,7 +16,7 @@ class Login extends DataConnection
 
         $password = md5($_POST['password'].'data_uchun') ;
         $con = self::get();
-        $sql = "SELECT user.username, user.password, user.mail, user.fio, user.role FROM user as user WHERE username = '$username' AND password = '$password'";
+        $sql = "SELECT user.id, user.username, user.password, user.mail, user.fio, user.role FROM user as user WHERE username = '$username' AND password = '$password'";
         $stmt = $con->prepare($sql);
         $stmt->execute();
         $results = $stmt->fetchAll();
@@ -24,6 +24,7 @@ class Login extends DataConnection
             $_SESSION['fio'] = $value['fio'];
             $_SESSION['username'] = $value['username'];
             $_SESSION['role'] = $value['role'];
+            $_SESSION['user_id'] = $value['id'];
             $time = time();
             $_SESSION['time'] = $time;
         }

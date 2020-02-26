@@ -228,6 +228,7 @@ $results = $AllPost->getAllPost();
                                 <tbody>
                                 <?php
                                 foreach ($results as $value):
+
                                     $i = 1 ?>
 
                                     <tr>
@@ -237,12 +238,14 @@ $results = $AllPost->getAllPost();
                                         <td><?= $value['created_at'] ?>
                                         <td><img width="100px" height="100px" src="/admin/uploads/<?=$value['image']?>" alt="">
                                         <td><?= $value['seen'] ?>
-                                        <td><?= $value['created_by'] ?>
-                                        <td><?= $value['cat_id'] ?>
+                                        <?php $username= $AllPost->findUser($value['created_by']) ?>
+                                        <td><?= $username[0]['fio'] ?>
+                                        <td><?= $AllPost->findCatName($value['cat_id'])['name']   ?>
                                         </td>
                                         <td>
-                                            <a href="/admin/app/Post.php?updatePage=<?= $value['id']; ?> " type="button"
-                                               class="btn btn-success">O'zgartirish</a>
+                                            <a href="/admin/resours/post/updatePost.php?update_id=<?= $value['id'] ?> " type="button"
+                                               class="btn btn-success">Yangilash</a>
+
                                             <a href="/admin/app/Post.php?<?='delete_id='. $value['id'] ?> " type="button"
                                                class="btn btn-danger">O'chirish</a>
                                         </td>
@@ -356,6 +359,7 @@ $results = $AllPost->getAllPost();
         </div>
         <!-- /.modal-dialog -->
     </div>
+
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">

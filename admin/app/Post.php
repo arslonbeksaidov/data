@@ -113,7 +113,8 @@ class Post extends DataConnection
             echo "Error: " . $e->getMessage();
         }
     }
-    function getAllCategory()
+
+    public function getAllCategory()
     {
         try {
             $this->connection = self::get();

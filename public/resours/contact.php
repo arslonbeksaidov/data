@@ -67,19 +67,22 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
 
-                <form class="form contact-form" id="contact_form">
+                <form method="post" action="../../admin/app/Message.php" class="form contact-form" id="contact_form">
                     <div class="clearfix">
 
                         <div class="cf-left-col">
 
                             <!-- Name -->
                             <div class="form-group">
-                                <input type="text" name="name" id="name" class="input-md round form-control" placeholder="Name" pattern=".{3,100}" required>
+                                <input type="text" name="title" id="name" class="input-md round form-control" placeholder="Name" pattern=".{3,100}" >
                             </div>
 
                             <!-- Email -->
                             <div class="form-group">
-                                <input type="email" name="email" id="email" class="input-md round form-control" placeholder="Email" pattern=".{5,100}" required>
+                                <input type="email" name="mail" id="email" class="input-md round form-control" placeholder="Email" pattern=".{5,100}" >
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="tel_number" id="tel" class="input-md round form-control" placeholder="Tel" pattern=".{5,100}" >
                             </div>
 
                         </div>
@@ -88,7 +91,7 @@
 
                             <!-- Message -->
                             <div class="form-group">
-                                <textarea name="message" id="message" class="input-md round form-control" style="height: 84px;" placeholder="Message"></textarea>
+                                <textarea name="message" id="message" class="input-md round form-control" style="height: 130px;" placeholder="Message"></textarea>
                             </div>
 
                         </div>
@@ -110,7 +113,8 @@
 
                             <!-- Send Button -->
                             <div class="align-right pt-10">
-                                <button class="submit_btn btn btn-mod btn-medium btn-round" id="submit_btn">Submit Message</button>
+                                <button type="submit" onclick="sweetAlert()" name="sendMessage" value="sendMessage" class="submit_btn btn btn-mod btn-medium btn-round">Xabarni yuborish</button>
+
                             </div>
 
                         </div>
@@ -128,3 +132,8 @@
 
     </div>
 </section>
+
+<!--sweeet alert star-->
+
+
+<!--sweet alert end-->

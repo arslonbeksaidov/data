@@ -27,3 +27,30 @@
 <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>
 <script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
 <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+
+<script src="/admin/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+<link rel="stylesheet" href="/admin/plugins/sweetalert2/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+<script>
+
+    function sweetAlert() {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 10000,
+
+            timerProgressBar: true,
+            onOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'success',
+            title: '<h4>Xabaringiz muvofaqiyatli yuborildi</h4>'
+        })
+    }
+
+</script>

@@ -2,7 +2,7 @@
     <div class="js-height-full container">
 
         <!-- Video BG Init -->
-        <div class="player" data-property="{videoURL:'http://youtu.be/I6jmZ5plZ3o',containment:'#home',autoPlay:true, showControls:false, showYTLogo: false, mute:true, startAt:0, opacity:1}">
+<!--        <div class="player" data-property="{videoURL:'http://youtu.be/I6jmZ5plZ3o',containment:'#home',autoPlay:true, showControls:false, showYTLogo: false, mute:true, startAt:0, opacity:1}">-->
         </div>
         <!-- End Video BG Init -->
 
@@ -25,7 +25,7 @@
                 <div class="local-scroll">
                     <a href="#about" class="btn btn-mod btn-border-w btn-medium btn-round hidden-xs">Oldinga</a>
                     <span class="hidden-xs">&nbsp;</span>
-                    <a href="http://vimeo.com/50201327" class="btn btn-mod btn-border-w btn-medium btn-round lightbox mfp-iframe">Video</a>
+<!--                    <a href="http://vimeo.com/50201327" class="btn btn-mod btn-border-w btn-medium btn-round lightbox mfp-iframe">Video</a>-->
                 </div>
 
             </div>

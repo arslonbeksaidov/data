@@ -130,7 +130,7 @@ class Post extends DataConnection
     }
 
 
-    public function updatePost($id)
+    public function updatePost($id,$image_name)
     {
         try {
 
@@ -147,7 +147,7 @@ class Post extends DataConnection
             $created_by = $_REQUEST['created_by'];
             $cat_id = $_REQUEST['cat_id'];
 
-            $image_name = $_FILES['image']['name'];
+
             $image_tmp_name = $_FILES['image']['tmp_name'];
             $image_size = $_FILES['image']['size'];
             define('SITE_ROOT', realpath(dirname(__FILE__)));
@@ -218,9 +218,27 @@ if (isset($_REQUEST['add_post'])) {
     $Post = new Post();
     $Post->deletePost($id);
     header('Location: /admin/resours/post/post.php');
-}elseif (isset($_REQUEST['updatePost'])){
+
+}elseif (isset($_REQUEST['updatePost']) and !empty($_FILES['image']['name'])){
+
+
+//    var_dump(empty($_FILES['image']['name']));die();
+
     $id = $_REQUEST['updatePost'];
+    $image_name = $_FILES['image']['name'];
     $Post = new Post();
-    $Post->updatePost($id);
+    $Post->updatePost($id,$image_name);
+
+    header('Location: /admin/resours/post/post.php');
+
+}elseif(empty($_FILES['image']['name']) and isset($_REQUEST['updatePost']) ){
+    $id = $_REQUEST['updatePost'];
+    $addImageName = $_REQUEST['addNameImage'];
+    $Post = new Post();
+    $Post->updatePost($id,$addImageName);
     header('Location: /admin/resours/post/post.php');
 }
+
+
+
+

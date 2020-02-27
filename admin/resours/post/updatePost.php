@@ -249,8 +249,9 @@ if (isset($_REQUEST['update_id'])) {
                                     <div class="form-group">
                                         <div class="input-group">
                                             <div class="custom-file">
-                                                <input type="file" name="image" class="custom-file-input"
+                                                <input type="file"  name="image" class="custom-file-input"
                                                        id="exampleInputFile">
+                                                <input type="hidden" name="addNameImage" value="<?= $result['image']?>">
                                                 <label class="custom-file-label" for="exampleInputFile">Choose
                                                     file</label>
                                             </div>

@@ -1,6 +1,7 @@
 <?php
-require 'app/Statistics.php';
+
 $number = new Statistics();
+
 ?>
 <div class="row">
           <div class="col-md-3 col-sm-6 col-12">

@@ -17,10 +17,10 @@
                                 <i class="fa fa-phone"></i>
                             </div>
                             <div class="ci-title font-alt">
-                                Call Us
+                                Bog'laning
                             </div>
                             <div class="ci-text">
-                                +61 3 8376 6284
+                                +998 91-999-888-6
                             </div>
                         </div>
                     </div>
@@ -33,10 +33,10 @@
                                 <i class="fa fa-map-marker"></i>
                             </div>
                             <div class="ci-title font-alt">
-                                Address
+                                Moʻljal:
                             </div>
                             <div class="ci-text">
-                                245 Quigley Blvd, Ste K
+                                Urganch shahri"Hub" kovorking markaz
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
 
                             <!-- Inform Tip -->
                             <div class="form-tip pt-20">
-                                <i class="fa fa-info-circle"></i> All the fields are required
+                                <i class="fa fa-info-circle"></i> Maydonlarni to'ldiring
                             </div>
 
                         </div>

@@ -25,15 +25,18 @@ class Message extends DataConnection
                 $mail = addslashes($_REQUEST['mail']);
                 $tel_number = addslashes($_REQUEST['tel_number']);
                 $isSeen = 0;
+                $date = time();
 //                var_dump($cat_name);die();
-                $sql = "INSERT INTO message ( title,message,tel_number,mail,isSeen ) VALUES ( :title,:message,:tel_number,:mail,:isSeen)";
+                $sql = "INSERT INTO message ( title,message,tel_number,mail,isSeen,created_at ) VALUES ( :title,:message,:tel_number,:mail,:isSeen,:created_at)";
                 $smtm = $this->connection->prepare($sql);
                 $smtm->bindParam(':title', $title);
                 $smtm->bindParam(':message', $message);
                 $smtm->bindParam(':tel_number', $tel_number);
                 $smtm->bindParam(':mail', $mail);
                 $smtm->bindParam(':isSeen', $isSeen);
-                $smtm->execute();
+                $smtm->bindParam(':created_at', $date);
+
+               $smtm->execute();
             }
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
@@ -46,5 +49,6 @@ class Message extends DataConnection
 if (isset($_REQUEST['sendMessage'])){
     $Message = new Message();
     $Message->addMessage();
+
     header('Location: /public/index.php');
 }

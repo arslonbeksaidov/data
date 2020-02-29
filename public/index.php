@@ -1,13 +1,19 @@
+<?php require '../admin/app/Post.php'; ?>
+<?php
+$getThreePost = new Post();
+$result = $getThreePost->getLatestPost();
 
+
+?>
 <!DOCTYPE html>
 <html>
 <?php require_once 'resours/head.php';?>
 <body class="appear-animate">
 
 <!-- Page Loader -->
-<div class="page-loader">
-    <div class="loader">Loading...</div>
-</div>
+<!--<div class="page-loader">-->
+<!--    <div class="loader">Loading...</div>-->
+<!--</div>-->
 <!-- End Page Loader -->
 
 <!-- Page Wrap -->

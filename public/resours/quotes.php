@@ -9,14 +9,13 @@
                     <div class="section-icon">
                         <span class="icon-quote"></span>
                     </div>
-                    <!-- Section Title --><h3 class="small-title font-alt">What people say?</h3>
+                    <!-- Section Title --><h3 class="small-title font-alt">Afarizm</h3>
                     <blockquote class="testimonial white">
                         <p>
-                            Phasellus luctus commodo ullamcorper a posuere rhoncus commodo elit. Aenean congue,
-                            risus utaliquam dapibus. Thanks!
+                            Bizning falsafamiz shundan iboratki, biz avval odamlarga g'amxo'rlik qilamiz.
                         </p>
                         <footer class="testimonial-author">
-                            John Doe, doodle inc.
+                            Mark Zuckerberg,Facebook inc.
                         </footer>
                     </blockquote>
                 </div>
@@ -34,14 +33,13 @@
                     <div class="section-icon">
                         <span class="icon-quote"></span>
                     </div>
-                    <!-- Section Title --><h3 class="small-title font-alt">What people say?</h3>
+                    <!-- Section Title --><h3 class="small-title font-alt">Afarizm</h3>
                     <blockquote class="testimonial white">
                         <p>
-                            Phasellus luctus commodo ullamcorper a posuere rhoncus commodo elit. Aenean congue,
-                            risus utaliquam dapibus. Thanks!
+                            Sizning quvonchingiz uzoqdagi maqsadingizda emas, balki sayohatingizda bo'lsin.
                         </p>
                         <footer class="testimonial-author">
-                            John Doe, doodle inc.
+                            Tim Cook, Apple inc.
                         </footer>
                     </blockquote>
                 </div>
@@ -59,14 +57,13 @@
                     <div class="section-icon">
                         <span class="icon-quote"></span>
                     </div>
-                    <!-- Section Title --><h3 class="small-title font-alt">What people say?</h3>
+                    <!-- Section Title --><h3 class="small-title font-alt">Afarizm</h3>
                     <blockquote class="testimonial white">
                         <p>
-                            Phasellus luctus commodo ullamcorper a posuere rhoncus commodo elit. Aenean congue,
-                            risus utaliquam dapibus. Thanks!
+                            Men dangasa odamni qiyin ishni bajarish uchun tanlayman. Chunki dangasa odam buni amalga oshirishning oson yo'lini topadi.
                         </p>
                         <footer class="testimonial-author">
-                            John Doe, doodle inc.
+                            Bill Gates, Windows inc.
                         </footer>
                     </blockquote>
                 </div>

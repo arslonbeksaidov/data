@@ -206,6 +206,22 @@ class Post extends DataConnection
         }
     }
 
+
+    public function getLatestPost(){
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare("SELECT * FROM post ORDER by id DESC LIMIT 3");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $results = $stmt->fetchAll();
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+
 }
 
 

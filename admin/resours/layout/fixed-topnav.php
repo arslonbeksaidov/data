@@ -1,7 +1,7 @@
 <?php
 $getNumberMessage = new Statistics();
 
-$Number = $getNumberMessage->getUnReadMessages();
+$messages = $getNumberMessage->getUnReadMessages();
 $NumberAll = $getNumberMessage->getNumberMessages();
 ?>
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -38,8 +38,8 @@ $NumberAll = $getNumberMessage->getNumberMessages();
                   <span class="badge badge-danger navbar-badge"><?php echo $NumberAll ?></span>
               </a>
               <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right ">
-                 <?php foreach ($Number as $item): ?>
-                  <a href="#" class="dropdown-item">
+                 <?php foreach ($messages as $item): ?>
+                  <a href="/admin/resours/xabarlar/oneXabar.php?findMessage=<?=$item['id']?>" class="dropdown-item">
                       <!-- Message Start -->
                       <div class="media">
                           <img src="/admin/uploads/logo/logo.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
@@ -55,8 +55,17 @@ $NumberAll = $getNumberMessage->getNumberMessages();
                       <!-- Message End -->
                   </a>
                   <div class="dropdown-divider"></div>
-<?php endforeach; ?>
-                  <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                    <?php endforeach; ?>
+                  <a href="/admin/resours/xabarlar/xabar.php" class="dropdown-item dropdown-footer">
+                      <?php
+                      if ($NumberAll ==0){
+                          echo 'O\'qilmagan xabarlar mavjud emas';
+                      }else{
+                          echo 'O\'qilmagan xabarlar';
+                      }
+                      ?>
+
+                  </a>
               </div>
           </li>
           <!-- Messages Dropdown Menu -->

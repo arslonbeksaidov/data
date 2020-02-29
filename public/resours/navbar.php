@@ -3,7 +3,7 @@
         <!-- Logo ( * your text or image into link tag *) -->
         <div class="nav-logo-wrap local-scroll">
             <a href="#top" class="logo">
-                <img src="images/logo-white.png" alt="" />
+                <img src="/admin/uploads/logo/original.png" alt="" />
             </a>
         </div>
         <div class="mobile-nav">

@@ -15,6 +15,8 @@ if (isset($_REQUEST['delete_id'])) {
 class Post extends DataConnection
 {
     public $connection;
+
+    /* yangilik qo'shish*/
     public function addPost()
     {
 
@@ -63,6 +65,7 @@ class Post extends DataConnection
 
     }
 
+    /* hamma yangiliklarni olish */
     public function getAllPost()
     {
 
@@ -79,6 +82,7 @@ class Post extends DataConnection
         }
     }
 
+    /* id boyicha shu id ni o'chirish*/
     public function deletePost($id)
     {
         try {
@@ -99,6 +103,7 @@ class Post extends DataConnection
         $conn = null;
     }
 
+    /* id boyicha shu id dagi yangilikni olish*/
     public function findPost($id)
     {
         try {
@@ -114,6 +119,37 @@ class Post extends DataConnection
         }
     }
 
+    /* id boyicha jamo azosini malumotlarini olish*/
+    public function findTeamMemeber($id)
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare("SELECT * FROM team WHERE id = $id");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $results = $stmt->fetch();
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+    public function findGalleryItem($id)
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare("SELECT * FROM galery WHERE id = $id");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $results = $stmt->fetch();
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    /* hamma kategoriyalarni olish*/
     public function getAllCategory()
     {
         try {
@@ -129,8 +165,8 @@ class Post extends DataConnection
         }
     }
 
-
-    public function updatePost($id,$image_name)
+    /* yangiliklarni yangilash*/
+    public function updatePost($id, $image_name)
     {
         try {
 
@@ -171,6 +207,8 @@ class Post extends DataConnection
             echo '' . "<br>" . $e->getMessage();
         }
     }
+
+    /* id boyicha shu id dagi foydalanuvchini malumotlarini olish*/
     public function findUser($id)
     {
         try {
@@ -188,6 +226,8 @@ class Post extends DataConnection
             echo $e->getMessage();
         }
     }
+
+    /* id boyicha kategoriyani olish*/
     public function findCatName($id)
     {
         try {
@@ -206,8 +246,9 @@ class Post extends DataConnection
         }
     }
 
-
-    public function getLatestPost(){
+    /* ohirgi 3 ta yangilikni chiqarish*/
+    public function getLatestPost()
+    {
         try {
             $this->connection = self::get();
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -221,7 +262,181 @@ class Post extends DataConnection
         }
     }
 
+    /*  gallereya yaratish uchun funksiya   */
 
+    public function createGallery()
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            if (isset($_POST['add_gallery']) and $_FILES['imageGallery']) {
+
+                $info = $_REQUEST['info'];
+                $category = $_REQUEST['category'];
+
+
+
+                $image_name = $_FILES['imageGallery']['name'];
+                $image_tmp_name = $_FILES['imageGallery']['tmp_name'];
+                $image_size = $_FILES['imageGallery']['size'];
+                define('SITE_ROOT', realpath(dirname(__FILE__)));
+
+                $target_dir = SITE_ROOT . '../../gallery_photo/';
+                $target_file = $target_dir . basename($image_name);
+                move_uploaded_file($image_tmp_name, $target_file);
+
+                $sql = "INSERT INTO galery ( image,category,info) VALUES ( :image,:category,:info)";
+
+                $smtm = $this->connection->prepare($sql);
+                $smtm->bindParam(':info', $info);
+                $smtm->bindParam(':image', $image_name);
+                $smtm->bindParam(':category', $category);
+
+
+                $smtm->execute();
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        $conn = null;
+
+    }
+
+
+    /* yaratish team info  */
+
+    public function createTeamInfo()
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            if (isset($_POST['add_team_info']) and $_FILES['imageTeam']) {
+
+                $name = $_REQUEST['name'];
+                $position = $_REQUEST['position'];
+                $title = $_REQUEST['title'];
+                $sub_title = $_REQUEST['sub_title'];
+                $insta = $_REQUEST['insta'];
+                $tel = $_REQUEST['tel'];
+
+
+                $image_name = $_FILES['imageTeam']['name'];
+                $image_tmp_name = $_FILES['imageTeam']['tmp_name'];
+                $image_size = $_FILES['imageTeam']['size'];
+                define('SITE_ROOT', realpath(dirname(__FILE__)));
+
+                $target_dir = SITE_ROOT . '../../team_photo/';
+                $target_file = $target_dir . basename($image_name);
+                move_uploaded_file($image_tmp_name, $target_file);
+
+                $sql = "INSERT INTO team ( name,position,title,sub_title,insta,tel,image) VALUES ( :name,:position,:title,:sub_title,:insta,:tel,:image )";
+
+                $smtm = $this->connection->prepare($sql);
+                $smtm->bindParam(':name', $name);
+                $smtm->bindParam(':position', $position);
+                $smtm->bindParam(':title', $title);
+                $smtm->bindParam(':sub_title', $sub_title);
+                $smtm->bindParam(':insta', $insta);
+                $smtm->bindParam(':tel', $tel);
+                $smtm->bindParam(':image', $image_name);
+
+                $smtm->execute();
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        $conn = null;
+
+    }
+
+    /*  team malumotlarini chiqarish  */
+    public function getAllTeam()
+    {
+
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare("SELECT * FROM team");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $results = $stmt->fetchAll();
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    /* delete Team*/
+
+    public function deleteTeam($id)
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $image_name = $this->findTeamMemeber($id);
+            define('SITE_ROOT', realpath(dirname(__FILE__)));
+            $target_dir = SITE_ROOT . '../../team_photo/';
+            $target_file = $target_dir . basename($image_name['image']);
+            $sql = "DELETE FROM team WHERE id=$id";
+            $this->connection->exec($sql);
+            unlink($target_file);
+            echo "Record deleted successfully";
+        } catch (PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+
+        $conn = null;
+    }
+    public function getAllGalleryCategory()
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare("SELECT id, name FROM categorygallery");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $results = $stmt->fetchAll();
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+    public function deleteGallery($id)
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $image_name = $this->findGalleryItem($id);
+            define('SITE_ROOT', realpath(dirname(__FILE__)));
+            $target_dir = SITE_ROOT . '../../gallery_photo/';
+            $target_file = $target_dir . basename($image_name['image']);
+            $sql = "DELETE FROM galery WHERE id=$id";
+            $this->connection->exec($sql);
+            unlink($target_file);
+            echo "Record deleted successfully";
+        } catch (PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+
+        $conn = null;
+    }
+    public function getAllGallery()
+    {
+
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare("SELECT * FROM galery");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $results = $stmt->fetchAll();
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
 }
 
 
@@ -235,7 +450,7 @@ if (isset($_REQUEST['add_post'])) {
     $Post->deletePost($id);
     header('Location: /admin/resours/post/post.php');
 
-}elseif (isset($_REQUEST['updatePost']) and !empty($_FILES['image']['name'])){
+} elseif (isset($_REQUEST['updatePost']) and !empty($_FILES['image']['name'])) {
 
 
 //    var_dump(empty($_FILES['image']['name']));die();
@@ -243,18 +458,36 @@ if (isset($_REQUEST['add_post'])) {
     $id = $_REQUEST['updatePost'];
     $image_name = $_FILES['image']['name'];
     $Post = new Post();
-    $Post->updatePost($id,$image_name);
+    $Post->updatePost($id, $image_name);
 
     header('Location: /admin/resours/post/post.php');
 
-}elseif(empty($_FILES['image']['name']) and isset($_REQUEST['updatePost']) ){
+} elseif (empty($_FILES['image']['name']) and isset($_REQUEST['updatePost'])) {
     $id = $_REQUEST['updatePost'];
     $addImageName = $_REQUEST['addNameImage'];
     $Post = new Post();
-    $Post->updatePost($id,$addImageName);
+    $Post->updatePost($id, $addImageName);
     header('Location: /admin/resours/post/post.php');
+} elseif (isset($_REQUEST['add_team_info']) and !empty($_FILES['imageTeam']['name'])) {
+    $Post = new Post();
+    $Post->createTeamInfo();
+    header('Location: /admin/resours/team/team.php');
+} elseif (isset($_REQUEST['delete_team_id'])) {
+    $id = intval($_REQUEST['delete_team_id']);
+    $Post = new Post();
+    $Post->deleteTeam($id);
+    header('Location: /admin/resours/team/team.php');
+}elseif (isset($_REQUEST['add_gallery']))
+{
+    $Post = new Post();
+    $Post->createGallery();
+    header('Location: /admin/resours/gallery/gallery.php');
+}elseif (isset($_REQUEST['delete_gallery_id'])) {
+    $id = intval($_REQUEST['delete_gallery_id']);
+    $Post = new Post();
+    $Post->deleteGallery($id);
+    header('Location: /admin/resours/gallery/gallery.php');
 }
-
 
 
 

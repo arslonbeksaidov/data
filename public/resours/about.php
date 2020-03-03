@@ -1,3 +1,4 @@
+
 <section class="page-section" id="about">
     <div class="container relative">
 
@@ -33,25 +34,25 @@
         <div class="row">
 
             <!-- Team item -->
+            <?php foreach ($resultTeam as $item):?>
             <div class="col-sm-4 mb-xs-30 wow fadeInUp">
                 <div class="team-item">
 
                     <div class="team-item-image">
 
-                        <img src="images/team/team-1.jpg" alt="" />
+                        <img src="/admin/team_photo/<?=$item['image']?>" alt="" />
 
                         <div class="team-item-detail">
 
-                            <h4 class="font-alt normal">Hello & Welcome!</h4>
+                            <h4 class="font-alt normal"><?=$item['title']?></h4>
 
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&nbsp;iaculis diam.
+                              <?=$item['sub_title']?>
                             </p>
 
                             <div class="team-social-links">
-                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+                                <a href="#" target="_blank"><i class="fa fa-instagram"><?=' '.$item['insta']?></i></a>
+                                <a href="#" target="_blank"><i class="fa fa-phone"><?=' '.$item['tel']?></i></a>
                             </div>
 
                         </div>
@@ -60,219 +61,22 @@
                     <div class="team-item-descr font-alt">
 
                         <div class="team-item-name">
-                            Thomas Rhythm
+                            <?=$item['name']?>
                         </div>
 
                         <div class="team-item-role">
-                            Art Director
+                            <?=$item['position']?>
                         </div>
 
                     </div>
 
                 </div>
             </div>
+            <?php endforeach; ?>
             <!-- End Team item -->
 
-            <!-- Team item -->
-            <div class="col-sm-4 mb-xs-30 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item">
 
-                    <div class="team-item-image">
 
-                        <img src="images/team/team-2.jpg" alt="" />
-
-                        <div class="team-item-detail">
-
-                            <h4 class="font-alt normal">Nice to meet!</h4>
-
-                            <p>
-                                Curabitur augue, nec finibus mauris pretium eu. Duis placerat ex gravida nibh tristique porta.
-                            </p>
-
-                            <div class="team-social-links">
-                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="team-item-descr font-alt">
-
-                        <div class="team-item-name">
-                            Marta Laning
-                        </div>
-
-                        <div class="team-item-role">
-                            Web engineer
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!-- End Team item -->
-
-            <!-- Team item -->
-            <div class="col-sm-4 mb-xs-30 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="team-item">
-
-                    <div class="team-item-image">
-
-                        <img src="images/team/team-3.jpg" alt="" />
-
-                        <div class="team-item-detail">
-
-                            <h4 class="font-alt normal">Whats Up!</h4>
-
-                            <p>
-                                Adipiscing elit curabitur eu&nbsp;adipiscing lacus eu&nbsp;adipiscing lacus, a&nbsp;iaculis diam.
-                            </p>
-
-                            <div class="team-social-links">
-                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="team-item-descr font-alt">
-
-                        <div class="team-item-name">
-                            Steve ANDERS
-                        </div>
-
-                        <div class="team-item-role">
-                            Developer
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!-- End Team item -->
-
-            <!-- Team item -->
-            <div class="col-sm-4 mb-xs-30 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="team-item">
-
-                    <div class="team-item-image">
-
-                        <img src="images/team/team-3.jpg" alt="" />
-
-                        <div class="team-item-detail">
-
-                            <h4 class="font-alt normal">Whats Up!</h4>
-
-                            <p>
-                                Adipiscing elit curabitur eu&nbsp;adipiscing lacus eu&nbsp;adipiscing lacus, a&nbsp;iaculis diam.
-                            </p>
-
-                            <div class="team-social-links">
-                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="team-item-descr font-alt">
-
-                        <div class="team-item-name">
-                            Steve ANDERS
-                        </div>
-
-                        <div class="team-item-role">
-                            Developer
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!-- End Team item -->  <!-- Team item -->
-            <div class="col-sm-4 mb-xs-30 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="team-item">
-
-                    <div class="team-item-image">
-
-                        <img src="images/team/team-3.jpg" alt="" />
-
-                        <div class="team-item-detail">
-
-                            <h4 class="font-alt normal">Whats Up!</h4>
-
-                            <p>
-                                Adipiscing elit curabitur eu&nbsp;adipiscing lacus eu&nbsp;adipiscing lacus, a&nbsp;iaculis diam.
-                            </p>
-
-                            <div class="team-social-links">
-                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="team-item-descr font-alt">
-
-                        <div class="team-item-name">
-                            Steve ANDERS
-                        </div>
-
-                        <div class="team-item-role">
-                            Developer
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!-- End Team item --> <!-- End Team item -->  <!-- Team item -->
-            <div class="col-sm-4 mb-xs-30 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="team-item">
-
-                    <div class="team-item-image">
-
-                        <img src="images/team/team-3.jpg" alt="" />
-
-                        <div class="team-item-detail">
-
-                            <h4 class="font-alt normal">Whats Up!</h4>
-
-                            <p>
-                                Adipiscing elit curabitur eu&nbsp;adipiscing lacus eu&nbsp;adipiscing lacus, a&nbsp;iaculis diam.
-                            </p>
-
-                            <div class="team-social-links">
-                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="team-item-descr font-alt">
-
-                        <div class="team-item-name">
-                            Steve ANDERS
-                        </div>
-
-                        <div class="team-item-role">
-                            Developer
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!-- End Team item -->
 
         </div>
 

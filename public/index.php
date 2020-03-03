@@ -2,7 +2,7 @@
 <?php
 $getThreePost = new Post();
 $result = $getThreePost->getLatestPost();
-
+$resultTeam  =$getThreePost->getAllTeam();
 
 ?>
 <!DOCTYPE html>
@@ -11,9 +11,9 @@ $result = $getThreePost->getLatestPost();
 <body class="appear-animate">
 
 <!-- Page Loader -->
-<!--<div class="page-loader">-->
-<!--    <div class="loader">Loading...</div>-->
-<!--</div>-->
+<div class="page-loader">
+    <div class="loader">Loading...</div>
+</div>
 <!-- End Page Loader -->
 
 <!-- Page Wrap -->

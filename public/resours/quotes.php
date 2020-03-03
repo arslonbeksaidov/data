@@ -1,4 +1,4 @@
-<section class="page-section bg-dark bg-dark-alfa-90 fullwidth-slider" data-background="images/full-width-images/section-bg-3.jpg">
+<section class="page-section bg-dark bg-dark-alfa-90 fullwidth-slider" data-background="/admin/uploads/logo/main.jpg">
 
     <!-- Slide Item -->
     <div>

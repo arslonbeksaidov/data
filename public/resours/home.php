@@ -1,4 +1,4 @@
-<section class="home-section bg-dark-alfa-50" data-background="images/mobile-video-placeholder.jpg" id="home">
+<section class="home-section bg-dark-alfa-50" data-background="/admin/uploads/logo/main.jpg" id="home">
     <div class="js-height-full container">
 
         <!-- Video BG Init -->

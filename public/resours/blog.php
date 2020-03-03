@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="post-prev-more">
-                    <a href="" class="btn btn-mod btn-gray btn-round">To'liq o'qish<i class="fa fa-angle-right"></i></a>
+                    <a href="/public/aboutPost.php?Post=<?=$item['id']?>" class="btn btn-mod btn-gray btn-round">To'liq o'qish<i class="fa fa-angle-right"></i></a>
                 </div>
 
             </div>

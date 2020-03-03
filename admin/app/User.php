@@ -23,6 +23,31 @@ class User extends DataConnection
 {
     public $connection;
 
+    public function getNumberMessages()
+    {
+        $con = self::get();
+        $sql = "SELECT COUNT(*) as Number FROM message where isSeen = 0";
+        $stmt = $con->prepare($sql);
+        $stmt->execute();
+        $number = $stmt->fetch();
+        return $number[0];
+    }
+
+    public function getUnReadMessages($limit = 3)
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare("SELECT * FROM message WHERE isSeen=0 ORDER by id LIMIT $limit");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $results = $stmt->fetchAll();
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
     public function addUser()
     {
         try {
@@ -51,7 +76,7 @@ class User extends DataConnection
         try {
             $this->connection = self::get();
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $stmt = $this->connection->prepare("SELECT id, username FROM user");
+            $stmt = $this->connection->prepare("SELECT * FROM user");
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $results = $stmt->fetchAll();
@@ -127,7 +152,7 @@ if (isset($_REQUEST['add_user'])) {
 } elseif (isset($_REQUEST['delete'])) {
     $User = new User();
     $User->deleteUser($id);
-    header('Location: /data/admin/resours/foydalanuvchilar/User.php');
+    header('Location: /admin/resours/foydalanuvchilar/User.php');
 } elseif (isset($_REQUEST['updatePage'])) {
     $User = new User();
     $results = $User->getAllUser($id);

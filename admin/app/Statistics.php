@@ -47,6 +47,7 @@ class Statistics extends DataConnection
             echo "Error: " . $e->getMessage();
         }
     }
+
     public function getAllMessages()
     {
         try {
@@ -61,6 +62,7 @@ class Statistics extends DataConnection
             echo "Error: " . $e->getMessage();
         }
     }
+
     public function deleteMessage($id)
     {
 

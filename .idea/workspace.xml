@@ -2,17 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97697cc6-e498-4512-9475-49751da8be06" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/resours/gallery/gallery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/resours/team/team.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/uploads/logo/main.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/aboutPost.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resours/single.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/Statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/Statistics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/gallery_photo/otkir_video.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/gallery_photo/sherzod_arxitektura.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/category/addCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/category/addCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/category/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/category/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/category/updateCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/category/updateCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/foydalanuvchilar/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/foydalanuvchilar/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/foydalanuvchilar/updateUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/foydalanuvchilar/updateUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/gallery/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/gallery/gallery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/resours/layout/fixed-sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/layout/fixed-sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/post/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/post/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/post/updatePost.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/post/updatePost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/team/team.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/team/team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/xabarlar/hammaXabarlar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/xabarlar/hammaXabarlar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/xabarlar/oneXabar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/xabarlar/oneXabar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resours/xabarlar/xabar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resours/xabarlar/xabar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/resours/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/resours/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/resours/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/resours/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/resours/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/resours/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/video/video.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/public/video/video.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/video/video.webm" beforeDir="false" afterPath="$PROJECT_DIR$/public/video/video.webm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/resours/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/resours/blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/resours/callAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/resours/callAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/resours/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/resours/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/resours/portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/resours/portfolio.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,20 +41,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
+      <file leaf-file-name="updateUser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/resours/foydalanuvchilar/updateUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="11" selection-start-line="4" selection-end-line="4" selection-end-column="11" />
+            <state relative-caret-position="51">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#script#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/app/Post.php">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/resours/foydalanuvchilar/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="410" column="40" selection-start-line="410" selection-start-column="40" selection-end-line="410" selection-end-column="40" />
+            <state relative-caret-position="272">
+              <caret line="230" column="13" selection-start-line="230" selection-start-column="13" selection-end-line="230" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/resours/about.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-711">
+              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="callAction.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/resours/callAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -44,17 +86,34 @@
       <file leaf-file-name="gallery.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/resours/gallery/gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="239" column="50" selection-start-line="239" selection-start-column="50" selection-end-line="239" selection-end-column="50" />
+            <state relative-caret-position="102">
+              <caret line="8" column="43" lean-forward="true" selection-start-line="6" selection-end-line="8" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/resours/post/post.php">
+      <file leaf-file-name="Category.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/app/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="251" column="41" lean-forward="true" selection-end-line="405" selection-end-column="7" />
+            <state relative-caret-position="287">
+              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="51" />
+              <folding>
+                <element signature="n#getNumberMessages#0;n#Category#0;n#!!top" />
+                <element signature="n#getUnReadMessages#0;n#Category#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/app/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="153" column="27" lean-forward="true" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
+              <folding>
+                <element signature="n#getNumberMessages#0;n#User#0;n#!!top" />
+                <element signature="n#getUnReadMessages#0;n#User#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,6 +129,9 @@
       <find>$NumberAll</find>
       <find>add_post</find>
       <find>kate</find>
+      <find>findGaler</find>
+      <find>find</find>
+      <find>aside</find>
       <find>delete</find>
     </findStrings>
   </component>
@@ -82,46 +144,50 @@
       <list>
         <option value="$PROJECT_DIR$/admin/resours/registration.php" />
         <option value="$PROJECT_DIR$/admin/resours/login.php" />
-        <option value="$PROJECT_DIR$/admin/resours/category/addCategory.php" />
         <option value="$PROJECT_DIR$/admin/resours/errorLogin.php" />
         <option value="$PROJECT_DIR$/admin/resours/category/addPost.php" />
         <option value="$PROJECT_DIR$/admin/resours/post/addPost.php" />
         <option value="$PROJECT_DIR$/admin/app/Auth.php" />
-        <option value="$PROJECT_DIR$/admin/resours/category/category.php" />
-        <option value="$PROJECT_DIR$/admin/resours/category/updateCategory.php" />
-        <option value="$PROJECT_DIR$/admin/resours/foydalanuvchilar/User.php" />
-        <option value="$PROJECT_DIR$/admin/app/User.php" />
         <option value="$PROJECT_DIR$/admin/app/Login.php" />
-        <option value="$PROJECT_DIR$/admin/app/Category.php" />
         <option value="$PROJECT_DIR$/public/resours/head.php" />
         <option value="$PROJECT_DIR$/public/resours/services.php" />
         <option value="$PROJECT_DIR$/public/resours/callSection.php" />
-        <option value="$PROJECT_DIR$/public/resours/callAction.php" />
         <option value="$PROJECT_DIR$/public/resours/features.php" />
-        <option value="$PROJECT_DIR$/public/resours/footer.php" />
-        <option value="$PROJECT_DIR$/admin/resours/post/updatePost.php" />
         <option value="$PROJECT_DIR$/public/resours/jsScript.php" />
         <option value="$PROJECT_DIR$/public/resours/map.php" />
         <option value="$PROJECT_DIR$/public/resours/quotes.php" />
         <option value="$PROJECT_DIR$/public/resours/contact.php" />
         <option value="$PROJECT_DIR$/admin/app/Message.php" />
-        <option value="$PROJECT_DIR$/public/resours/blog.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/admin/resours/layout/statistics.php" />
-        <option value="$PROJECT_DIR$/admin/resours/xabarlar/hammaXabarlar.php" />
-        <option value="$PROJECT_DIR$/admin/resours/xabarlar/xabar.php" />
-        <option value="$PROJECT_DIR$/admin/resours/xabarlar/oneXabar.php" />
-        <option value="$PROJECT_DIR$/admin/app/Statistics.php" />
         <option value="$PROJECT_DIR$/admin/resours/layout/fixed-topnav.php" />
         <option value="$PROJECT_DIR$/public/resours/navbar.php" />
         <option value="$PROJECT_DIR$/public/resours/home.php" />
-        <option value="$PROJECT_DIR$/admin/resours/layout/fixed-sidebar.php" />
-        <option value="$PROJECT_DIR$/admin/resours/post/post.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/public/resours/footer.php" />
+        <option value="$PROJECT_DIR$/public/resours/blog.php" />
+        <option value="$PROJECT_DIR$/public/aboutPost.php" />
+        <option value="$PROJECT_DIR$/public/resours/single.php" />
+        <option value="$PROJECT_DIR$/public/resours/portfolio.php" />
         <option value="$PROJECT_DIR$/public/resours/about.php" />
-        <option value="$PROJECT_DIR$/admin/resours/team/team.php" />
+        <option value="$PROJECT_DIR$/admin/app/Statistics.php" />
+        <option value="$PROJECT_DIR$/admin/app/Category.php" />
+        <option value="$PROJECT_DIR$/admin/resours/category/category.php" />
+        <option value="$PROJECT_DIR$/admin/resours/category/addCategory.php" />
+        <option value="$PROJECT_DIR$/admin/resours/category/updateCategory.php" />
         <option value="$PROJECT_DIR$/admin/app/Post.php" />
         <option value="$PROJECT_DIR$/admin/resours/gallery/gallery.php" />
+        <option value="$PROJECT_DIR$/admin/resours/post/post.php" />
+        <option value="$PROJECT_DIR$/admin/resours/post/updatePost.php" />
+        <option value="$PROJECT_DIR$/admin/resours/team/team.php" />
+        <option value="$PROJECT_DIR$/admin/resours/xabarlar/oneXabar.php" />
+        <option value="$PROJECT_DIR$/admin/resours/xabarlar/xabar.php" />
+        <option value="$PROJECT_DIR$/admin/resours/xabarlar/hammaXabarlar.php" />
+        <option value="$PROJECT_DIR$/admin/resours/foydalanuvchilar/updateUser.php" />
+        <option value="$PROJECT_DIR$/admin/app/User.php" />
+        <option value="$PROJECT_DIR$/admin/resours/foydalanuvchilar/User.php" />
+        <option value="$PROJECT_DIR$/admin/resours/layout/fixed-sidebar.php" />
+        <option value="$PROJECT_DIR$/public/resours/callAction.php" />
       </list>
     </option>
   </component>
@@ -160,6 +226,12 @@
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="data" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -174,14 +246,14 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\SOFT\New program\data\admin\resours\post" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\SOFT\New program\data\admin\uploads\logo" />
       <recent name="F:\SOFT\New program\data\public" />
       <recent name="F:\SOFT\New program\data\admin\resours\post" />
       <recent name="F:\SOFT\New program\data\admin\resours\category" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\SOFT\New program\data\admin\resours\post" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,14 +306,16 @@
       <workItem from="1582972546077" duration="6789000" />
       <workItem from="1583142746263" duration="3929000" />
       <workItem from="1583209237665" duration="8542000" />
+      <workItem from="1583230980042" duration="7509000" />
+      <workItem from="1583256835340" duration="6193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114764000" />
+    <option name="totallyTimeSpent" value="128466000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="736" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
@@ -249,8 +323,8 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32943144" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.17056856" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20873787" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.17056856" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21482602" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -265,6 +339,29 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32943144" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21197411" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39966556" />
+      <window_info anchor="bottom" id="Migrations" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17056856" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -304,57 +401,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/resours/post/addPost.php" />
-    <entry file="file://$PROJECT_DIR$/admin/app1.PNG" />
-    <entry file="file://$PROJECT_DIR$/admin/app/1.PNG" />
-    <entry file="file://$PROJECT_DIR$/admin/resours/foydalanuvchilar/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="229" column="34" lean-forward="true" selection-start-line="229" selection-start-column="34" selection-end-line="229" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/uploads/images.jpg" />
-    <entry file="file://$PROJECT_DIR$/admin/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="58" column="35" lean-forward="true" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/app/DataConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/uploads/32acadf8ebf6c49307824be2d429a9bb.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/resours/callAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/resours/portfolio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2278">
-          <caret line="134" column="10" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/resours/features.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1870">
           <caret line="110" column="10" selection-start-line="110" selection-start-column="10" selection-end-line="110" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/resours/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -444,27 +494,6 @@
     <entry file="file://$PROJECT_DIR$/admin/uploads/logo/logo.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/resours/blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="83" selection-start-line="27" selection-start-column="83" selection-end-line="27" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/category/category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3579">
-          <caret line="9" column="15" selection-end-line="296" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/app/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/app/Message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -472,66 +501,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/xabarlar/xabar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2822">
-          <caret line="166" column="24" selection-end-line="305" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/xabarlar/hammaXabarlar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3468">
-          <caret line="204" column="39" selection-start-line="204" selection-start-column="39" selection-end-line="204" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/app/Statistics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="5" selection-start-line="35" selection-start-column="20" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/layout/fixed-topnav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/xabarlar/oneXabar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="235" column="56" selection-start-line="235" selection-start-column="56" selection-end-line="235" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="1467" column="2" selection-start-line="1467" selection-start-column="2" selection-end-line="1467" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/resours/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="51" selection-start-column="51" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/resours/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/resours/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="17" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -545,73 +518,355 @@
     <entry file="file://$PROJECT_DIR$/admin/team_photo/shaxzod_direkdor.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/layout/fixed-sidebar.php">
+    <entry file="file://$PROJECT_DIR$/public/css/style-responsive.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+        <state relative-caret-position="191">
+          <caret line="219" column="18" selection-start-line="219" selection-start-column="18" selection-end-line="219" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resours/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\Post">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\Post</OriginalElement>
+          <nodes>
+            <node x="" y="">\DataConnection</node>
+            <node x="" y="">\Post</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="59.0" y="473.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constants</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resours/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resours/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="51" selection-start-column="51" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resours/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resours/blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/F:/SOFT/New program/data/admin/app">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">\Statistics</node>
+            <node x="" y="">\DataConnection</node>
+            <node x="" y="">\Message</node>
+            <node x="" y="">\Post</node>
+            <node x="" y="">\Auth</node>
+            <node x="" y="">\Login</node>
+            <node x="" y="">\User</node>
+            <node x="" y="">\Category</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="293.0" y="59.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resours/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+          <folding>
+            <element signature="e#791#797#0#HTML" expanded="true" />
+            <element signature="e#798#804#0#HTML" expanded="true" />
+            <element signature="e#3149#3155#0#HTML" expanded="true" />
+            <element signature="e#3207#3213#0#HTML" expanded="true" />
+            <element signature="e#3702#3708#0#HTML" expanded="true" />
+            <element signature="e#5279#5285#0#HTML" expanded="true" />
+            <element signature="e#5337#5343#0#HTML" expanded="true" />
+            <element signature="e#6495#6502#1#HTML" expanded="true" />
+            <element signature="e#6591#6597#0#HTML" expanded="true" />
+            <element signature="e#7610#7617#1#HTML" expanded="true" />
+            <element signature="e#7714#7720#0#HTML" expanded="true" />
+            <element signature="e#8980#8987#1#HTML" expanded="true" />
+            <element signature="e#9076#9082#0#HTML" expanded="true" />
+            <element signature="e#10139#10146#1#HTML" expanded="true" />
+            <element signature="e#10235#10241#0#HTML" expanded="true" />
+            <element signature="e#12905#12911#0#HTML" expanded="true" />
+            <element signature="e#12999#13005#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/aboutPost.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resours/portfolio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="11" selection-start-line="4" selection-end-line="4" selection-end-column="11" />
+        <state relative-caret-position="182">
+          <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/resours/about.php">
+    <entry file="file://$PROJECT_DIR$/admin/resours/layout/fixed-topnav.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="54" column="90" selection-start-line="54" selection-start-column="90" selection-end-line="54" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/team/team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="211" column="107" selection-start-line="211" selection-start-column="107" selection-end-line="211" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/category/updateCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="210" column="52" lean-forward="true" selection-start-line="210" selection-start-column="52" selection-end-line="210" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/post/updatePost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2185">
-          <caret line="253" column="78" selection-start-line="253" selection-start-column="78" selection-end-line="253" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/post/post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="251" column="41" lean-forward="true" selection-end-line="405" selection-end-column="7" />
+        <state relative-caret-position="272">
+          <caret line="111" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="111" />
+          <folding>
+            <element signature="n#nav#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/resours/category/addCategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2482">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resours/gallery/gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="239" column="50" selection-start-line="239" selection-start-column="50" selection-end-line="239" selection-end-column="50" />
+        <state relative-caret-position="251">
+          <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/app/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="410" column="40" selection-start-line="410" selection-start-column="40" selection-end-line="410" selection-end-column="40" />
+        <state relative-caret-position="340">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="n#getNumberMessages#0;n#Post#0;n#!!top" />
+            <element signature="n#getUnReadMessages#0;n#Post#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/category/updateCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="211" column="12" lean-forward="true" selection-start-line="133" selection-start-column="3" selection-end-line="211" selection-end-column="12" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/post/post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="210" column="12" lean-forward="true" selection-start-line="132" selection-start-column="3" selection-end-line="210" selection-end-column="12" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/post/updatePost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="4" selection-end-line="7" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/category/category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#div#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Statistics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#449#722#0#PHP" />
+            <element signature="e#728#1290#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/team/team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="5" selection-end-line="9" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/xabarlar/oneXabar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="219" lean-forward="true" selection-start-line="42" selection-end-line="219" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/xabarlar/xabar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="5" selection-end-line="8" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/xabarlar/hammaXabarlar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="212" selection-end-column="12" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="51" />
+          <folding>
+            <element signature="n#getNumberMessages#0;n#Category#0;n#!!top" />
+            <element signature="n#getUnReadMessages#0;n#Category#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/gallery/gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="43" lean-forward="true" selection-start-line="6" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/foydalanuvchilar/updateUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="153" column="27" lean-forward="true" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
+          <folding>
+            <element signature="n#getNumberMessages#0;n#User#0;n#!!top" />
+            <element signature="n#getUnReadMessages#0;n#User#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/layout/fixed-sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-end-line="81" selection-end-column="8" />
+          <folding>
+            <element signature="n#aside#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resours/foydalanuvchilar/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="230" column="13" selection-start-line="230" selection-start-column="13" selection-end-line="230" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resours/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-711">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resours/callAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
         </state>
       </provider>
     </entry>

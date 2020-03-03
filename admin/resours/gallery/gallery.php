@@ -5,6 +5,9 @@ $AllPost = new Post();
 $results = $AllPost->getAllGallery();
 $resultsGaleryCategory = $AllPost->getAllGalleryCategory();
 
+$messages = $AllPost->getUnReadMessages();
+$NumberAll = $AllPost->getNumberMessages();
+
 ?>
 
 <!DOCTYPE html>
@@ -37,28 +40,49 @@ $resultsGaleryCategory = $AllPost->getAllGalleryCategory();
             <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
             </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="../../index3.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
 
         </ul>
 
 
         <!-- SEARCH FORM -->
-        <form class="form-inline ml-3">
-            <div class="input-group input-group-sm">
-                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-navbar" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
+
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown show">
+                <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
+                    <i class="fa fa-address-card"></i>
+                    <span class="badge badge-danger navbar-badge"><?php echo $NumberAll ?></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right ">
+                    <?php foreach ($messages as $item): ?>
+                        <a href="/admin/resours/xabarlar/oneXabar.php?findMessage=<?=$item['id']?>" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                                <img src="/admin/uploads/logo/logo.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                <div class="media-body">
+                                    <h3 class="dropdown-item-title">
+                                        <?= $item['title']?>
+                                        <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                                    </h3>
+                                    <p class="text-sm"><?=$item['message']?></p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> <?= date('i',time() - $item['created_at']) .' minut oldin yuborilgan'  ?></p>
+                                </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                    <?php endforeach; ?>
+                    <a href="/admin/resours/xabarlar/xabar.php" class="dropdown-item dropdown-footer">
+                        <?php
+                        if ($NumberAll ==0){
+                            echo 'O\'qilmagan xabarlar mavjud emas';
+                        }else{
+                            echo 'O\'qilmagan xabarlar';
+                        }
+                        ?>
+
+                    </a>
+                </div>
+            </li>
             <!-- Messages Dropdown Menu -->
             <li id="grey" onmouseover="grey()" onmouseout="white()" class="nav-item dropdown show">
                 <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
@@ -69,21 +93,20 @@ $resultsGaleryCategory = $AllPost->getAllGalleryCategory();
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="/admin/dist/img/user1-128x128.jpg" alt="User Avatar"
-                                 class="img-size-50 mr-3 img-circle">
+                            <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     <?= $_SESSION['fio'] ?>
                                     <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                                 </h3>
-                                <p class="text-sm"><?= date('i', time() - $_SESSION['time']) . ' minutdan beri aktivsiz' ?></p>
+                                <p class="text-sm"><?= date('i',time() - $_SESSION['time']) .' minutdan beri aktivsiz'  ?></p>
 
                             </div>
                         </div>
                         <!-- Message End -->
                     </a>
 
-                    <a href="/admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
+                    <a href="../admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
                 </div>
             </li>
 
@@ -111,7 +134,7 @@ $resultsGaleryCategory = $AllPost->getAllGalleryCategory();
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-            <img src="/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light">AdminLTE 4</span>
         </a>
@@ -121,7 +144,7 @@ $resultsGaleryCategory = $AllPost->getAllGalleryCategory();
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
                     <a href="#" class="d-block"><?= $_SESSION['username'] ?></a>
@@ -130,8 +153,7 @@ $resultsGaleryCategory = $AllPost->getAllGalleryCategory();
 
             <!-- Sidebar Menu -->
             <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                    data-accordion="false">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item">
@@ -163,6 +185,22 @@ $resultsGaleryCategory = $AllPost->getAllGalleryCategory();
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Faydalanuvchilar
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Jamoa
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Gallery
                             </p>
                         </a>
                     </li>
@@ -237,11 +275,12 @@ $resultsGaleryCategory = $AllPost->getAllGalleryCategory();
 
                                         </td>
                                         <td>
-                                            <?php $AllPost->findGalleryItem($value['id'])  ?>
+                                            <?php echo $AllPost->findGalleryCatName($value['category'])['name'];
+//                                       var_dump( $javob['name']);
+                                            ?>
                                         </td>
                                         <td>
-                                            <a href="/admin/resours/post/updatePost.php?update_id=<?= $value['id'] ?> " type="button"
-                                               class="btn btn-success">Yangilash</a>
+
 
                                             <a href="/admin/app/Post.php?<?='delete_gallery_id='. $value['id'] ?> " type="button"
                                                class="btn btn-danger">O'chirish</a>

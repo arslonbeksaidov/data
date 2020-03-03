@@ -16,6 +16,31 @@ class Post extends DataConnection
 {
     public $connection;
 
+    public function getNumberMessages()
+    {
+        $con = self::get();
+        $sql = "SELECT COUNT(*) as Number FROM message where isSeen = 0";
+        $stmt = $con->prepare($sql);
+        $stmt->execute();
+        $number = $stmt->fetch();
+        return $number[0];
+    }
+
+    public function getUnReadMessages($limit = 3)
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare("SELECT * FROM message WHERE isSeen=0 ORDER by id LIMIT $limit");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $results = $stmt->fetchAll();
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
     /* yangilik qo'shish*/
     public function addPost()
     {
@@ -135,6 +160,20 @@ class Post extends DataConnection
         }
     }
     public function findGalleryItem($id)
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare("SELECT * FROM galery WHERE id = $id");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $results = $stmt->fetch();
+            return $results;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+    public function findGalleryItems($id)
     {
         try {
             $this->connection = self::get();
@@ -435,6 +474,43 @@ class Post extends DataConnection
             return $results;
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
+        }
+    }
+
+    /* berilgan id boyicha gallereya kategoriya malumotlarini topish */
+
+    public function findGalleryCatName($id)
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "SELECT * FROM categorygallery WHERE id = $id";
+            $stmt = $this->connection->prepare($sql);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $result = $stmt->fetch();
+            return $result;
+
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+    public function findGalleryCatNameDistinct($id)
+    {
+        try {
+            $this->connection = self::get();
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "SELECT DISTINCT * FROM categorygallery WHERE id = $id";
+            $stmt = $this->connection->prepare($sql);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $result = $stmt->fetch();
+            return $result;
+
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
         }
     }
 }

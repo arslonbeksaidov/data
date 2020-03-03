@@ -3,6 +3,9 @@
 $getThreePost = new Post();
 $result = $getThreePost->getLatestPost();
 $resultTeam  =$getThreePost->getAllTeam();
+$resultGallery  = $getThreePost->getAllGallery();
+$resultAllCatName  = $getThreePost->getAllGalleryCategory();
+
 
 ?>
 <!DOCTYPE html>
@@ -11,9 +14,9 @@ $resultTeam  =$getThreePost->getAllTeam();
 <body class="appear-animate">
 
 <!-- Page Loader -->
-<div class="page-loader">
-    <div class="loader">Loading...</div>
-</div>
+<!--<div class="page-loader">-->
+<!--    <div class="loader">Loading...</div>-->
+<!--</div>-->
 <!-- End Page Loader -->
 
 <!-- Page Wrap -->

@@ -1,1 +1,3 @@
-366363
+<?php
+header('Location: /public');
+?>

@@ -1,6 +1,5 @@
 <?php
-//dfdfdf//dfdf
-//var_dump($_POST);die();
+
 /**
  * Created by PhpStorm.
  * User: apple
@@ -8,8 +7,8 @@
  * Time: 11:02 PM
  */
 
-require 'DataConnection.php';   // DataConnection fayilini chaqirish
 
+require_once 'MyAutoloader.php';
 class Auth extends DataConnection  // DataConnection dan meros olish
 {
 
@@ -38,7 +37,7 @@ class Auth extends DataConnection  // DataConnection dan meros olish
             echo "Error: " . $e->getMessage();
         }
         $conn = null;
-        header("Location: ../index.php"); // hammasini bajargandan keyin header funksiyasi index.php fayligia o'tkazib yuboradi
+
 //
     }
 
@@ -46,7 +45,7 @@ class Auth extends DataConnection  // DataConnection dan meros olish
 }
 
 Auth::insertUser();  // yaratilgan funksiyani ishlatish uchun.
-
+header("Location: /admin/resours/foydalanuvchilar/User.php"); // hammasini bajargandan keyin header funksiyasi index.php fayligia o'tkazib yuboradi
 //var_dump(Auth::getAuth());//die();
 //$results = Auth::getAuth();
 

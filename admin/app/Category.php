@@ -6,8 +6,8 @@ declare(strict_types=1);
  * Date: 2/21/2020
  * Time: 12:39 PM
  */
-
-require 'DataConnection.php';
+require_once 'MyAutoloader.php';
+//require 'DataConnection.php';
 
 if (isset($_REQUEST['delete'])) {
     $id = intval($_REQUEST['delete']);

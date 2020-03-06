@@ -1,6 +1,6 @@
 <?php
-session_start();
-require_once '../../app/User.php';
+//session_start();
+require_once '../../app/MyAutoloader.php';
 $AllUser = new User();
 $results = $AllUser->getAllUser();
 
@@ -105,7 +105,7 @@ $NumberAll = $AllUser->getNumberMessages();
                         <!-- Message End -->
                     </a>
 
-                    <a href="../admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
+                    <a href="/admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
                 </div>
             </li>
 
@@ -156,7 +156,7 @@ $NumberAll = $AllUser->getNumberMessages();
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/post/post.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Yangiliklar
@@ -164,7 +164,7 @@ $NumberAll = $AllUser->getNumberMessages();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/category/category.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Kategoriyalar
@@ -172,7 +172,7 @@ $NumberAll = $AllUser->getNumberMessages();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/xabarlar/hammaXabarlar.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Xabarlar
@@ -180,7 +180,7 @@ $NumberAll = $AllUser->getNumberMessages();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/foydalanuvchilar/User.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Faydalanuvchilar
@@ -188,7 +188,7 @@ $NumberAll = $AllUser->getNumberMessages();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/team/team.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Jamoa
@@ -196,13 +196,22 @@ $NumberAll = $AllUser->getNumberMessages();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/gallery/gallery.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Gallery
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/admin/resours/course/course.php" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Yangi kurs qo'shish
+                            </p>
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

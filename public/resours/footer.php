@@ -10,7 +10,7 @@
         <!-- Social Links -->
         <div class="footer-social-links mb-110 mb-xs-60">
             <a href="#" title="Facebook" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="#" title="Twitter" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/data_learning_centre/" title="Twitter" target="_blank"><i class="fa fa-facebook"></i></a>
 
         </div>
         <!-- End Social Links -->
@@ -20,7 +20,7 @@
 
             <!-- Copyright -->
             <div class="footer-copy font-alt">
-                <a href="http://themeforest.net/user/theme-guru/portfolio" target="_blank"><?='Data inc '. date('Y')?></a>.
+                <a href="#" target="_blank"><?='Data inc '. date('Y')?></a>.
             </div>
             <!-- End Copyright -->
 

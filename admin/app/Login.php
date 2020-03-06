@@ -6,8 +6,9 @@
  * Time: 11:09 PM
  */
 
-require 'DataConnection.php';
-session_start();
+//require 'DataConnection.php';
+//session_start();
+require_once 'MyAutoloader.php';
 class Login extends DataConnection
 {
     public static function getAuth()

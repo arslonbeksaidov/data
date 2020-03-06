@@ -5,8 +5,8 @@
  * Date: 2/17/2020
  * Time: 8:41 PM
  */
-require 'DataConnection.php';
-
+//require 'DataConnection.php';
+require_once 'MyAutoloader.php';
 class Statistics extends DataConnection
 {
     public $connection;

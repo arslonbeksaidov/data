@@ -50,7 +50,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/admin/resours/foydalanuvchilar/User.php" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Faydalanuvchilar
@@ -70,6 +70,14 @@
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Gallery
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/resours/course/course.php" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Yangi kurs qo'shish
                         </p>
                     </a>
                 </li>

@@ -10,8 +10,8 @@
                     <div class="banner-content">
                         <h3 class="banner-heading font-alt">Data ishonch ?</h3>
                         <div class="banner-decription">
-                            Insonlarni zamonaviy kasblarga o’rgatish kabi mas’ulyatli vazifalarini bajarish bilan biz
-                            o’quv markazimizga nisbatan ishonchni oshirishga intilamiz.
+                            <h3>Insonlarni zamonaviy kasblarga o’rgatish kabi mas’ulyatli vazifalarini bajarish bilan biz
+                            o’quv markazimizga nisbatan ishonchni oshirishga intilamiz.</h3>
                         </div>
                         <div class="local-scroll">
                         </div>
@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-sm-6 banner-image wow fadeInUp" data-wow-duration="1.2s">
-                <img src="images/promo-1.png" alt=""/>
+                <img style="padding-top: 100px" src="/admin/uploads/logo/main.png" alt=""/>
             </div>
 
         </div>

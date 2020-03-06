@@ -2,7 +2,7 @@
     <div class="container relative">
 
         <h2 class="section-title font-alt mb-70 mb-sm-40">
-            Why Choose Us?
+            Nimaga aynan bizni ?
         </h2>
 
         <!-- Features Grid -->
@@ -14,11 +14,15 @@
                     <div class="alt-features-icon">
                         <span class="icon-flag"></span>
                     </div>
-                    <h3 class="alt-features-title font-alt">We’re Creative</h3>
+                    <h3 class="alt-features-title font-alt">Biz kreativlar</h3>
                     <div class="alt-features-descr align-left">
-                        Lorem ipsum dolor sit amet, c-r adipiscing elit.
-                        In maximus ligula semper metus pellentesque mattis.
-                        Maecenas  volutpat, diam enim.
+                        Kreativlik – hozirgi kunda ko’p eshitiladigan so’z. Bolada kreativlik bo’lishi muhim ekan.
+                        Kreativlik esa ijodkorlikdir.
+
+                        Hozirgi kunda aqlli bo’lish yetarli emas, kreativ bo’lish kerak. Biron talabni bekamiko’st
+                        bajarish ko’pchilik qo’lidan keladi, lekin talabni o’ylab topish, yanglik kiritish, ishga ijod
+                        bilan yondashish, yangi yo’llarni izlash, yangi ko’rinish topish, yangi usul qo’llash hammaga
+                        ham xos qobiliyat emas.
                     </div>
                 </div>
             </div>
@@ -30,11 +34,12 @@
                     <div class="alt-features-icon">
                         <span class="icon-clock"></span>
                     </div>
-                    <h3 class="alt-features-title font-alt">We’re Punctual</h3>
+                    <h3 class="alt-features-title font-alt">Punktuallik</h3>
                     <div class="alt-features-descr align-left">
-                        Proin fringilla augue at maximus vestibulum.
-                        Nam pulvinar vitae neque et porttitor. Praesent sed
-                        nisi eleifend, lorem fermentum orci sit amet, iaculis libero.
+                        Insonning vaqti – bu nihoyatda qadrli ne'mat. Kechikkaningda, punktuallika rioya etmaganingida,
+                        sen birovning vaqtini o‘g‘irlaysan, chunki bu vaqtini u inson yanada muhimroq ishga sarflagan
+                        bo‘lardi.Punktuallik – muhim insoniy xislat bo‘lib, u ayniqsa odamlarga xizmat ko‘rsatishda
+                        kerakli sifatdir.
                     </div>
                 </div>
             </div>
@@ -46,11 +51,12 @@
                     <div class="alt-features-icon">
                         <span class="icon-hotairballoon"></span>
                     </div>
-                    <h3 class="alt-features-title font-alt">We have magic</h3>
+                    <h3 class="alt-features-title font-alt">Ijodiy fikrlash</h3>
                     <div class="alt-features-descr align-left">
-                        Curabitur iaculis accumsan augue, nec finibus mauris pretium eu.
-                        Duis placerat ex gravida nibh tristique porta. Nulla facilisi.
-                        Suspendisse ultricies eros blandit.
+                        Ilmiy taraqqiyot asri odamlarni jadal rivojlanishga majbur qildi. Ijodiy fikrlashning yuksak
+                        darajada rivojlangan mutaxassislari uchun juda zarur edi. Biz maxsus qaror qabul qila oladigan
+                        faol shaxslar bilan ishlaymiz. Kreativ yondashuvni talab qiladigan nostandart ko'rinishlar
+                        qadrlanadi.
                     </div>
                 </div>
             </div>
@@ -62,11 +68,12 @@
                     <div class="alt-features-icon">
                         <span class="icon-heart"></span>
                     </div>
-                    <h3 class="alt-features-title font-alt">We love minimalism</h3>
+                    <h3 class="alt-features-title font-alt">Biz minimalistikani tanlaymiz</h3>
                     <div class="alt-features-descr align-left">
-                        Cras luctus interdum sodales. Quisque quis odio dui. Sedes sit
-                        amet neque malesuada, lobortis  commodo magna ntesque pharetra
-                        metus vivera sagittis.
+                        Minimalizmni hayotimizni normal yashash uchun eng kerakli jihatlarni qoldirib, ortiqchasini olib
+                        tashlash, deb tushunishimiz mumkin. Hayotimizdan ortiqcha narsalarni/odamlarni/ish-harakatlarni
+                        chiqarib tashlaganimiz sari, minimalizmga qanchalar muhtoj ekanligimizni yaxshiroq tushuna
+                        boramiz.
                     </div>
                 </div>
             </div>
@@ -78,11 +85,11 @@
                     <div class="alt-features-icon">
                         <span class="icon-linegraph"></span>
                     </div>
-                    <h3 class="alt-features-title font-alt">We’re responsible</h3>
+                    <h3 class="alt-features-title font-alt">Ma'suliyatlilik hissi</h3>
                     <div class="alt-features-descr align-left">
-                        Fusce aliquet quam eget neque ultrices elementum. Nulla posuere
-                        felis id arcu blandit sagittis. Eleifender vestibulum purus, sit
-                        amet vulputate risus.
+                        Ma’suliyatlilik – bu bizning qabul qilayotgan yoki qabul qila olmayotgan qarorlarimizga, amalga
+                        oshirayotgan yoki amalga oshira olmayotgan ishlarimizga va ular sabab kelayotgan natijalarga
+                        javobgarlikni o’z zimmamizga ola bilishga qaratilgan burchimizdir.
                     </div>
                 </div>
             </div>
@@ -94,11 +101,11 @@
                     <div class="alt-features-icon">
                         <span class="icon-chat"></span>
                     </div>
-                    <h3 class="alt-features-title font-alt">We're Friendly</h3>
+                    <h3 class="alt-features-title font-alt">Do'stona muhit</h3>
                     <div class="alt-features-descr align-left">
-                        Pulvinar vitae neque et porttitor. Integer non dapibus diam, ac
-                        eleifend lectus. Praesent sed nisi eleifend, fermentum orci sit
-                        amet, iaculis libero interdum.
+                        Data hamma bilan do'stona va bu muhitda siz eng yuqori cho'qqilarni zabt etasiz. Aslida ko'p
+                        muvovaqiyatlarning kalitlaridan biri bu muhitding qandayligiga bog'liqdir va shuning shuning
+                        uchun biz bu faqtorga alohida etibor qaratamiz.
                     </div>
                 </div>
             </div>

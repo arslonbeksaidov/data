@@ -1,19 +1,14 @@
 <?php
 //session_start();
+$results = $_REQUEST;
 require_once '../../app/MyAutoloader.php';
-$AllPost = new Post();
+$AllCategory = new Category();
+$CourseCategory = new CourseCategory();
 
-$messages = $AllPost->getUnReadMessages();
-$NumberAll = $AllPost->getNumberMessages();
+$getAllCourseName  = $CourseCategory->getAllCategory();
+$messages = $AllCategory->getUnReadMessages();
+$NumberAll = $AllCategory->getNumberMessages();
 
-
-if (isset($_REQUEST['update_id'])) {
-    $id = intval($_REQUEST['update_id']);
-    $Post = new Post();
-    $result = $Post->findPost($id);
-    $cat_names = $Post->getAllCategory();
-}
-//var_dump($results);die();
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,17 +52,21 @@ if (isset($_REQUEST['update_id'])) {
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right ">
                     <?php foreach ($messages as $item): ?>
-                        <a href="/admin/resours/xabarlar/oneXabar.php?findMessage=<?=$item['id']?>" class="dropdown-item">
+                        <a href="/admin/resours/xabarlar/oneXabar.php?findMessage=<?= $item['id'] ?>"
+                           class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="/admin/uploads/logo/logo.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                <img src="/admin/uploads/logo/logo.jpg" alt="User Avatar"
+                                     class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
-                                        <?= $item['title']?>
+                                        <?= $item['title'] ?>
                                         <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm"><?=$item['message']?></p>
-                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> <?= date('i',time() - $item['created_at']) .' minut oldin yuborilgan'  ?></p>
+                                    <p class="text-sm"><?= $item['message'] ?></p>
+                                    <p class="text-sm text-muted"><i
+                                                class="far fa-clock mr-1"></i> <?= date('i', time() - $item['created_at']) . ' minut oldin yuborilgan' ?>
+                                    </p>
                                 </div>
                             </div>
                             <!-- Message End -->
@@ -76,9 +75,9 @@ if (isset($_REQUEST['update_id'])) {
                     <?php endforeach; ?>
                     <a href="/admin/resours/xabarlar/xabar.php" class="dropdown-item dropdown-footer">
                         <?php
-                        if ($NumberAll ==0){
+                        if ($NumberAll == 0) {
                             echo 'O\'qilmagan xabarlar mavjud emas';
-                        }else{
+                        } else {
                             echo 'O\'qilmagan xabarlar';
                         }
                         ?>
@@ -96,13 +95,14 @@ if (isset($_REQUEST['update_id'])) {
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                            <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar"
+                                 class="img-size-50 mr-3 img-circle">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     <?= $_SESSION['fio'] ?>
                                     <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                                 </h3>
-                                <p class="text-sm"><?= date('i',time() - $_SESSION['time']) .' minutdan beri aktivsiz'  ?></p>
+                                <p class="text-sm"><?= date('i', time() - $_SESSION['time']) . ' minutdan beri aktivsiz' ?></p>
 
                             </div>
                         </div>
@@ -223,6 +223,7 @@ if (isset($_REQUEST['update_id'])) {
         <!-- /.sidebar -->
     </aside>
     <!-- Content Wrapper. Contains page content -->
+
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -251,67 +252,35 @@ if (isset($_REQUEST['update_id'])) {
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Yangilash</h3>
+                                <h3 class="card-title">To'liq qurs qo'shish</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form autocomplete="on" role="form" enctype="multipart/form-data" method="post"
-                                  action="/admin/app/Post.php">
+                            <form role="form" method="post" action="/admin/app/Course.php">
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <input value="<?= $result['title'] ?>" type="text" name="title"
-                                               class="form-control" id="post"
-                                               placeholder="Sarlavha">
-                                    </div>
-                                    <div class="form-group">
-                                        <input value="<?= $result['sub_title'] ?>" type="text" name="sub_title"
-                                               class="form-control" id="post"
-                                               placeholder="Qisqacha ma'lumot">
-                                    </div>
-                                    <div class="form-group">
-                                    <textarea type="text" name="full_text" class="form-control" id="post"
-                                              placeholder="<?= $result['full_text'] ?>"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <input value="<?= $result['created_at'] ?>" type="date" name="created_at"
-                                               class="form-control" id="post"
-                                               placeholder="Yaratilgan vaqti">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="hidden" name="seen" value="<?=$result['seen']?>" class="form-control" id="post"
-                                               placeholder="Created at">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="hidden" name="created_by" value="<?= $_SESSION['user_id']?>" class="form-control" id="post"
-                                               placeholder="Created by">
-                                    </div>
-                                    <div class="form-group">
-                                        <select name="cat_id" class="custom-select">
-                                            <?php foreach ($cat_names as $cat_name): ?>
-                                                <option value="<?= $cat_name['id'] ?>"><?= $cat_name['name'] ?></option>
-                                            <?php endforeach; ?>
-
+                                        <label for="kategoriya">Kategoriya nomi</label>
+                                        <select type="text" name="cat_id" class="form-control" id="kategoriya"
+                                               placeholder="Kategoriya">
+                                            <?php foreach ($getAllCourseName as $item): ?>
+                                            <option value="<?=$item['id']?>"><?=$item['name']?></option>
+                                        <?php endforeach;?>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file"  name="image" class="custom-file-input"
-                                                       id="exampleInputFile">
-                                                <input type="hidden" name="addNameImage" value="<?= $result['image']?>">
-                                                <label class="custom-file-label" for="exampleInputFile">Choose
-                                                    file</label>
-                                            </div>
-                                            <div class="input-group-append">
-                                                <span class="input-group-text" id="">Upload</span>
-                                            </div>
-                                        </div>
+                                        <label for="kategoriya">Matn</label>
+                                        <textarea type="text" name="text" class="form-control" id="kategoriya"
+                                                  placeholder="Matn"></textarea>
                                     </div>
-                                    <button class="btn btn-success float-right" type="submit" name="updatePost" value="<?=$result['id']?>">Yangilash</button>
+
                                 </div>
                                 <!-- /.card-body -->
 
+                                <div class="card-footer">
+                                    <button type="submit" name="add_course" value="add_course"
+                                            class="btn btn-primary">Submit
+                                    </button>
+                                </div>
                             </form>
                         </div>
                         <!-- /.card -->

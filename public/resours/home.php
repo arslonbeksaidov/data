@@ -2,7 +2,7 @@
     <div class="js-height-full container">
 
         <!-- Video BG Init -->
-        <div class="player" data-property="{videoURL:'bu yerga youtuve video',containment:'#home',autoPlay:true, showControls:false, showYTLogo: false, mute:true, startAt:0, opacity:1}">
+        <div class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=-8ljvDRZKLI',containment:'#home',autoPlay:true, showControls:false, showYTLogo: false, mute:true, startAt:0, opacity:1}">
         </div>
         <!-- End Video BG Init -->
 
@@ -25,7 +25,7 @@
                 <div class="local-scroll">
                     <a href="#about" class="btn btn-mod btn-border-w btn-medium btn-round hidden-xs">Oldinga</a>
                     <span class="hidden-xs">&nbsp;</span>
-                    <a href="bu yerga youtube video" class="btn btn-mod btn-border-w btn-medium btn-round lightbox mfp-iframe">Video</a>
+                    <a href="https://www.youtube.com/watch?v=TV9TWKxbj4A" class="btn btn-mod btn-border-w btn-medium btn-round lightbox mfp-iframe">Video</a>
                 </div>
 
             </div>

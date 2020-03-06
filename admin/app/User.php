@@ -7,8 +7,8 @@ declare(strict_types=1);
  * Time: 12:39 PM
  */
 
-require 'DataConnection.php';
-
+//require 'DataConnection.php';
+require_once "MyAutoloader.php";
 if (isset($_REQUEST['delete'])) {
     $id = intval($_REQUEST['delete']);
 } elseif (isset($_REQUEST['updatePage'])) {
@@ -161,7 +161,7 @@ if (isset($_REQUEST['add_user'])) {
 //    header("Location: /admin/resours/category/updateCategory.php?".http_build_query($results));
 } elseif (isset($_REQUEST['sendUpdatedData1'])) {
     $User = new User();
-    $results = $User->updateUser($id, $cat_name1);
+    $results = $User->updateUser($id, $cat_name);
     header('Location: /data/admin/resours/foydalanuvchilar/User.php');
 }
 

@@ -6,8 +6,8 @@
  * Time: 4:33 PM
  */
 
-require_once 'DataConnection.php';
-
+//require_once 'DataConnection.php';
+require_once "MyAutoloader.php";
 class Message extends DataConnection
 {
     public $connection;

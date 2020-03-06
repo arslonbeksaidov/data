@@ -19,8 +19,8 @@
             <ul class="clearlist scroll-nav local-scroll">
                 <li class="active"><a href="#home">Asosiy</a></li>
                 <li><a href="#about">Haqida</a></li>
-                <li><a href="#services">Xizmatlar</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Kurslar</a></li>
+                <li><a href="#portfolio">Galereya</a></li>
                 <li><a href="#news">Yangiliklar</a></li>
                 <li><a href="#contact">Bog'lanish</a></li>
 

@@ -1,21 +1,21 @@
 <?php
-session_start();
-$results = $_REQUEST;
-var_dump($results);die();
-require_once '../../app/User.php';
-$AllUser = new User();
-//$results = $AllUser->getAllUser();
-
-$messages = $AllUser->getUnReadMessages();
-$NumberAll = $AllUser->getNumberMessages();
+//session_start();
+require_once '../../app/MyAutoloader.php';
+$AllCategory = new Category();
+$AllCourse = new Course();
+$CourseName = new CourseCategory();
+$results = $AllCourse->getAllCourse();
+$messages = $AllCategory->getUnReadMessages();
+$NumberAll = $AllCategory->getNumberMessages();
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | General Form Elements</title>
+    <title>AdminLTE 3 | DataTables</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,6 +23,8 @@ $NumberAll = $AllUser->getNumberMessages();
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
@@ -31,7 +33,6 @@ $NumberAll = $AllUser->getNumberMessages();
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
     <!-- Navbar -->
-
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
@@ -118,13 +119,15 @@ $NumberAll = $AllUser->getNumberMessages();
         function grey() {
             document.getElementById('grey').style.backgroundColor = 'grey';
         }
-
         function white() {
             document.getElementById('grey').style.backgroundColor = 'white';
         }
     </script>
 
+
     <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
 
     <!-- Main Sidebar Container -->
 
@@ -155,7 +158,7 @@ $NumberAll = $AllUser->getNumberMessages();
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/post/post.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Yangiliklar
@@ -163,7 +166,7 @@ $NumberAll = $AllUser->getNumberMessages();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/category/category.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Kategoriyalar
@@ -171,7 +174,7 @@ $NumberAll = $AllUser->getNumberMessages();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/xabarlar/hammaXabarlar.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Xabarlar
@@ -179,7 +182,7 @@ $NumberAll = $AllUser->getNumberMessages();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/foydalanuvchilar/User.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Faydalanuvchilar
@@ -187,7 +190,7 @@ $NumberAll = $AllUser->getNumberMessages();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/team/team.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Jamoa
@@ -195,19 +198,29 @@ $NumberAll = $AllUser->getNumberMessages();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/admin/resours/gallery/gallery.php" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Gallery
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/admin/resours/course/course.php" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Yangi kurs qo'shish
+                            </p>
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
         </div>
         <!-- /.sidebar -->
     </aside>
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -215,12 +228,12 @@ $NumberAll = $AllUser->getNumberMessages();
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>General Form</h1>
+                        <h1>Kategoriya</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">General Form</li>
+                            <li class="breadcrumb-item active">DataTables</li>
                         </ol>
                     </div>
                 </div>
@@ -229,47 +242,65 @@ $NumberAll = $AllUser->getNumberMessages();
 
         <!-- Main content -->
         <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- left column -->
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6 ">
-                        <!-- general form elements -->
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">Faydalanuvchi qo'shish</h3>
-                            </div>
-                            <!-- /.card-header -->
-                            <!-- form start -->
-                            <form role="form" method="post" action="/admin/app/User.php">
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="foydalanuvchi">Faydalanuvchi</label>
-                                        <input type="text" value="<?= $results['data0']['username'] ?>" name="cat_name1"  class="form-control" id="foydalanuvchi"
-                                               placeholder="<?= $results['data0']['username'] ?>">
-                                    </div>
+            <div class="row">
+                <div class="col-12">
 
-                                </div>
-                                <!-- /.card-body -->
-
-                                <div class="card-footer">
-                                    <button type="submit" name="sendUpdatedData1" value="<?php echo $results['data0']['id']?>" class="btn btn-primary">Submit</button>
-                                </div>
-                            </form>
+                    <!-- /.card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title"><a href="/admin/resours/displayCourse/addCourse.php" class="btn btn-success">Kurs haqida yozish</a></h3>
                         </div>
-                        <!-- /.card -->
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Matn</th>
+                                    <th>logo</th>
+                                    <th width="25%">Actions</th>
 
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                foreach ($results as $value):
+                                    ?>
 
+                                    <tr>
+                                        <td><?= $value['id']?></td>
+                                        <td><?=$value['text']?>
+                                        <td><?=$CourseName->findCourse($value['cat_id'])['name'];  ?>
+                                        </td>
+                                        <td>
+                                            <!--                                            <a href="/admin/app/Category.php?updatePage=--><?//= $value['id']; ?><!-- " type="button" class="btn btn-success">O'zgartirish</a>-->
+                                            <a href="/admin/app/Course.php?delete=<?= $value['id']; ?> " type="button" class="btn btn-danger">O'chirish</a>
+                                        </td>
+                                    </tr>
+                                <?php
+                                endforeach;
+
+                                ?>
+
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Logo</th>
+                                    <th>Action</th>
+
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
                     </div>
-                    <div class="col-md-3"></div>
-
-                    <!--/.col (left) -->
-                    <!-- right column -->
-
-                    <!--/.col (right) -->
+                    <!-- /.card -->
                 </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
         </section>
         <!-- /.content -->
     </div>
@@ -294,15 +325,25 @@ $NumberAll = $AllUser->getNumberMessages();
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- bs-custom-file-input -->
-<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugins/datatables/jquery.dataTables.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        bsCustomFileInput.int();
+<!-- page script -->
+<script>
+    $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+        });
     });
 </script>
 </body>

@@ -6,12 +6,12 @@
  * Time: 11:15 PM
  */
 declare(strict_types=1);
-require 'DataConnection.php';
-
+//require 'DataConnection.php';
+require_once 'MyAutoloader.php';
 if (isset($_REQUEST['delete_id'])) {
     $id = intval($_REQUEST['delete_id']);
 }
-
+$dataConnection = new DataConnection();
 class Post extends DataConnection
 {
     public $connection;

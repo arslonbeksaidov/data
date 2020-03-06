@@ -2,7 +2,7 @@
     <div class="container relative">
 
         <h2 class="section-title font-alt mb-70 mb-sm-40">
-            Contact
+            Biz bilan bog'laning
         </h2>
 
         <div class="row mb-60 mb-xs-40">

@@ -5,8 +5,8 @@
  * Date: 3/5/2020
  * Time: 4:16 PM
  */
-require_once 'MyAutoloader.php';
-class CourseCategory extends DataConnection
+require_once 'DataConnection1.php';
+class CourseCategory extends DataConnection1
 {
     public $connection;
 

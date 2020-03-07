@@ -1,4 +1,9 @@
-<?php require '../admin/app/MyAutoloader.php'; ?>
+<?php
+require '../admin/app/Post.php';
+require '../admin/app/Course.php';
+require '../admin/app/CourseCategory.php';
+
+?>
 <?php
 $getThreePost = new Post();
 $result = $getThreePost->getLatestPost();

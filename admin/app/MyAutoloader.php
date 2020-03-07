@@ -10,9 +10,10 @@
 
 namespace MyAutoloader;
 session_start();
+$actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 
 if ($_SESSION['role']!=1){
-    header("location: ../admin/resours/errorLogin.php");
+    header("location: /admin/resours/errorLogin.php");
 }
 
 class MyAutoloader

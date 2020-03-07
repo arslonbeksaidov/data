@@ -109,7 +109,7 @@ if (isset($_REQUEST['update_id'])) {
                         <!-- Message End -->
                     </a>
 
-                    <a href="../admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
+                    <a href="/admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
                 </div>
             </li>
 

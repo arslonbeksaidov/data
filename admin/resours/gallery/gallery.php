@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 require_once '../../app/Post.php';
 $AllPost = new Post();
 $results = $AllPost->getAllGallery();
@@ -106,7 +106,7 @@ $NumberAll = $AllPost->getNumberMessages();
                         <!-- Message End -->
                     </a>
 
-                    <a href="../admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
+                    <a href="/admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
                 </div>
             </li>
 

@@ -1,7 +1,7 @@
 <?php
 //session_start();
 $results = $_REQUEST;
-require_once '../../app/Category.php';
+require_once '../../app/MyAutoloader.php';
 $AllCategory = new Category();
 
 
@@ -105,7 +105,7 @@ $NumberAll = $AllCategory->getNumberMessages();
                         <!-- Message End -->
                     </a>
 
-                    <a href="../admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
+                    <a href="/admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
                 </div>
             </li>
 

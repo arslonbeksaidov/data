@@ -6,8 +6,8 @@
  * Time: 11:15 PM
  */
 declare(strict_types=1);
-//require 'DataConnection.php';
-require_once 'MyAutoloader.php';
+require 'DataConnection.php';
+//require_once 'MyAutoloader.php';
 if (isset($_REQUEST['delete_id'])) {
     $id = intval($_REQUEST['delete_id']);
 }
@@ -518,7 +518,7 @@ class Post extends DataConnection
 
 if (isset($_REQUEST['add_post'])) {
     $Post = new Post();
-    $Post->addPost();
+$Post->addPost();
     header('Location: /admin/resours/post/post.php');
 
 } elseif (isset($_REQUEST['delete_id'])) {

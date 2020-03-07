@@ -3,6 +3,7 @@
 require_once '../../app/MyAutoloader.php';
 $AllPost = new Post();
 $results = $AllPost->getAllPost();
+$resultsCategory = $AllPost->getAllCategory();
 
 $messages = $AllPost->getUnReadMessages();
 $NumberAll = $AllPost->getNumberMessages();
@@ -105,7 +106,7 @@ $NumberAll = $AllPost->getNumberMessages();
                         <!-- Message End -->
                     </a>
 
-                    <a href="../admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
+                    <a href="/admin/app/LogOut.php" class="dropdown-item dropdown-footer">Tizimdan chiqish</a>
                 </div>
             </li>
 
@@ -380,13 +381,16 @@ $NumberAll = $AllPost->getNumberMessages();
                                            placeholder="Created at">
                                 </div>
                                 <div class="form-group">
-                                    <input type="hidden" name="created_by" value="35" class="form-control" id="post"
+                                    <input type="hidden" name="created_by" value="<?=$_SESSION['user_id']?>" class="form-control" id="post"
                                            placeholder="Created at">
                                 </div>
                                 <div class="form-group">
                                     <select name="cat_id" class="custom-select">
-                                        <option value="16">cat_name</option>
-
+                                        <?php foreach ($resultsCategory as $value): ?>
+                                        <option value="<?=$value['id']?>">
+                                            <?php echo $value['name'] ?>
+                                        </option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
 

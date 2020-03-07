@@ -1,4 +1,5 @@
 <?php
+
 $AllCourseName = new CourseCategory();
 $AllCourseText = new Course();
 $getCourseName = $AllCourseName->getAllCategory();

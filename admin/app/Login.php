@@ -30,7 +30,7 @@ class Login extends DataConnection
             $_SESSION['time'] = $time;
         }
         if ($_SESSION['role'] == 1 and $_SESSION['username']) {
-            header("Location: /admin");
+            header("Location: /admin/index.php");
         } else {
             header("location: ../resours/errorLogin.php");
         }

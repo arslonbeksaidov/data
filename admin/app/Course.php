@@ -5,13 +5,12 @@
  * Date: 3/5/2020
  * Time: 4:46 PM
  */
-require_once 'MyAutoloader.php';
-class Course extends DataConnection
+require_once 'DataConnection2.php';
+class Course extends DataConnection2
 {
     public $connection;
     public function addCourse()
     {
-
         try {
             $this->connection = self::get();
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

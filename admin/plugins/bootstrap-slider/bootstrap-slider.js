@@ -698,7 +698,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				this.options.range = true;
 				this._state.value = this.options.value;
 			} else if (this.options.range) {
-				// User wants a range, but value is not an array
+				// UserOne wants a range, but value is not an array
 				this._state.value = [this.options.value, this.options.max];
 			} else {
 				this._state.value = this.options.value;

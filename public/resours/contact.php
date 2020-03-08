@@ -52,7 +52,7 @@
                                 Email
                             </div>
                             <div class="ci-text">
-                                <a href="mailto:support@bestlooker.pro">support@bestlooker.pro</a>
+                                <a href="mailto:support@bestlooker.pro">Sobirovshahzod6@gmail.com</a>
                             </div>
                         </div>
                     </div>

@@ -36,7 +36,7 @@ $number = new Statistics();
 
               <div class="info-box-content">
                 <span class="info-box-text">Foydalanuvchilar</span>
-                <span class="info-box-number"> <?= $number->countTableRow('user') ?> </span>
+                <span class="info-box-number"> <?= $number->countTableRow('UserOne') ?> </span>
               </div>
               <!-- /.info-box-content -->
             </div>

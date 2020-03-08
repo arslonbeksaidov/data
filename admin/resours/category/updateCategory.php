@@ -10,7 +10,6 @@ $AllCategory = new Category();
 $messages = $AllCategory->getUnReadMessages();
 $NumberAll = $AllCategory->getNumberMessages();
 
-//var_dump($results);die();
 ?>
 <!DOCTYPE html>
 <html>

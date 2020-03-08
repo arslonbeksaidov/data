@@ -2017,7 +2017,7 @@
 			}
 		}
 	
-		/* User specified column options */
+		/* UserOne specified column options */
 		if ( oOptions !== undefined && oOptions !== null )
 		{
 			// Backwards compatibility

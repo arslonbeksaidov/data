@@ -1,7 +1,7 @@
 <?php
 //session_start();
 require_once '../../app/MyAutoloader.php';
-$AllUser = new User();
+$AllUser = new UserOne();
 $results = $AllUser->getAllUser();
 
 $messages = $AllUser->getUnReadMessages();
@@ -274,7 +274,7 @@ $NumberAll = $AllUser->getNumberMessages();
 <!--                                    <td>--><?//=$value['role']?>
                                     </td>
                                     <td>
-                                        <a href="/admin/app/User.php?delete=<?= $value['id']; ?> " type="button" class="btn btn-danger">O'chirish</a>
+                                        <a href="/admin/app/UserOne.php?delete=<?= $value['id']; ?> " type="button" class="btn btn-danger">O'chirish</a>
                                     </td>
                                 </tr>
                                 <?php

@@ -6,7 +6,7 @@
 .lockscreen {
   background: $gray-200;
 
-  // User name [optional]
+  // UserOne name [optional]
   .lockscreen-name {
     font-weight: 600;
     text-align: center;
@@ -41,7 +41,7 @@
   width: 290px;
 }
 
-// User image
+// UserOne image
 .lockscreen-image {
   @include border-radius(50%);
   background: $white;

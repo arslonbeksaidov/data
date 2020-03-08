@@ -2,7 +2,7 @@
 declare(strict_types=1);
 /**
  * Created by PhpStorm.
- * User: apple
+ * UserOne: apple
  * Date: 2/21/2020
  * Time: 12:39 PM
  */
@@ -19,7 +19,7 @@ if (isset($_REQUEST['delete'])) {
 //        var_dump($id);die();
 }
 
-class User extends DataConnection
+class UserOne extends DataConnection
 {
     public $connection;
 
@@ -146,22 +146,22 @@ class User extends DataConnection
 
 
 if (isset($_REQUEST['add_user'])) {
-    $User = new User();
+    $User = new UserOne();
     $User->addUser();
-    header('Location: /data/admin/resours/foydalanuvchilar/User.php');
+    header('Location: /data/admin/resours/foydalanuvchilar/UserOneOne.php');
 } elseif (isset($_REQUEST['delete'])) {
-    $User = new User();
+    $User = new UserOne();
     $User->deleteUser($id);
-    header('Location: /admin/resours/foydalanuvchilar/User.php');
+    header('Location: /admin/resours/foydalanuvchilar/UserOneOne.php');
 } elseif (isset($_REQUEST['updatePage'])) {
-    $User = new User();
-    $results = $User->getAllUser($id);
+    $User = new UserOne();
+    $results = $User->getAllUser();
     header("Location: /admin/resours/foydalanuvchilar/updateUser.php?" . http_build_query
         ($results, 'data'));
 //    header("Location: /admin/resours/category/updateCategory.php?".http_build_query($results));
 } elseif (isset($_REQUEST['sendUpdatedData1'])) {
-    $User = new User();
+    $User = new UserOne();
     $results = $User->updateUser($id, $cat_name);
-    header('Location: /data/admin/resours/foydalanuvchilar/User.php');
+    header('Location: /data/admin/resours/foydalanuvchilar/UserOne.phpphp');
 }
 
